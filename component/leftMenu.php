@@ -11,9 +11,9 @@
     if($_SESSION['MemberType'] == 1){
       echo "ผู้ดูแลระบบ";
     }else if($_SESSION['MemberType'] == 2){
-      echo "เจ้าของ";
+      echo "ผู้ดูแลกิจการ";
     }else{
-      echo "ธนาคาร";
+      echo "เจ้าหน้าที่ธนาคาร";
     }
     ?>
     

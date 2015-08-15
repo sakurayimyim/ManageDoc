@@ -14,6 +14,11 @@
 <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
 <link rel="stylesheet" href="css/style.css" type="text/css"/>
 <link rel="stylesheet" href="css/jquery.dataTables.min.css" type="text/css"/>
+<!-- JS -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.dataTables.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
 
 <body>
 <div class="alert-success">
@@ -70,9 +75,6 @@ echo "<meta http-equiv='refresh' content='1; url=?bpage=homepage'>";
 }*/
 }
 ?>
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.dataTables.min.js"></script>
 <script type="text/javascript">
 $(document).ready( function () {
     $('#table_id').DataTable();
