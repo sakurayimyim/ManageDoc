@@ -529,15 +529,57 @@ ul.left-menu li.active{
 }
 .left-menu-head{
 	width:219px;
-	min-height:35px;
+	min-height:40px;
 	border-bottom:1px #192128 solid;
-	padding: 10px 0 0 40px;	
-	font-size:14px;
-	color:#999999;	
-	background-color: #232A2F;
+	padding: 10px 0 0 45px;	
+	font-size:13px;
+	color:#a8acb1;	
+	
 }
+
+.left-img-1{
+	background: #232A2F url(../images/leftmenu/add-userg.png) 20px 12px no-repeat;
+}
+.left-img-1:hover{
+	background:  url(../images/leftmenu/add-userw.png) 20px 12px no-repeat;
+}
+
+.left-img-2{
+	background: #232A2F url(../images/leftmenu/userg.png) 20px 12px no-repeat;
+}
+.left-img-2:hover{
+	background: url(../images/leftmenu/userw.png) 20px 12px no-repeat;
+}
+.left-img-3{
+	background: #232A2F url(../images/leftmenu/adddocg.png) 20px 12px no-repeat;
+}
+.left-img-3:hover{
+	background: url(../images/leftmenu/adddocw.png) 20px 12px no-repeat;
+}
+
+.left-img-4{
+	background: #232A2F url(../images/leftmenu/file-text2g.png) 20px 12px no-repeat;
+}
+.left-img-4:hover{
+	background: url(../images/leftmenu/file-text2w.png) 20px 12px no-repeat;
+}
+
+.left-img-5{
+	background: #232A2F url(../images/leftmenu/cogg.png) 20px 12px no-repeat;
+}
+.left-img-5:hover{
+	background: url(../images/leftmenu/cogw.png) 20px 12px no-repeat;
+}
+.left-img-6{
+	background: #232A2F url(../images/leftmenu/logoutg.png) 20px 12px no-repeat;
+}
+.left-img-6:hover{
+	background: url(../images/leftmenu/logoutw.png) 20px 12px no-repeat;
+}
+
+
 .left-menu-head:hover{
-	background:#338FE2;
+	background-color:#348fe2;
 	color: #ffffff;
 }
 .system-herder{
@@ -725,5 +767,6 @@ ul.left-menu li.active{
 	line-height: 55px;
 	margin-left: 20px;
 }
+
 
 /************** New Document By Sakura **********************************/
