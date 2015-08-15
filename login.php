@@ -7,7 +7,7 @@
 </head>
 <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
 <link rel="stylesheet" href="css/style.css" type="text/css"/>
-<body>
+<body style="background:#1A2229;">
 <div class="alert-success">
   <div class="alert-img"><img src="images/check.png" alt="checkmark"></div>
   <div class="alert-txt">Success</div>
@@ -19,13 +19,10 @@
   <div class="alert-detail"> You did not set the proper return e-mail address.</div>
 </div>
 <form id="frmLogin">
-   <div id="content" style="background-color:#F2F2F2;">
     <div id="login_bg">
       <div id="login_mid">
-        <form id="form1" name="form1">
-      <div id="login_topic">
-        <img src="images/logoIEC.png" width="147" height="135">
-      </div>
+      <form id="form1" name="form1">
+      <div id="login_topic"><img src="images/logintop.png" width="350" height="50"></div>
       <div class="clean30"></div>
       <div class="login_from">
         <input type="text" class="form-control" style="height:40px" name="Username" id="Username" placeholder="Username">
@@ -35,22 +32,18 @@
         <input type="password" class="form-control" style="height:40px" name="Password" id="Password" placeholder="Password">
       </div>
       <div class="clean"></div>
-      <div class="login_from">
+      <div style="float:left;margin-left:35px;"><a href="?page=forgetpass">ลืมรหัสผ่าน ?</a></div>
+      <div style="float:right;margin-right:35px;">
       <input type="button" id="submit" class="btn_login alert" name="submit"value="เข้าสู่ระบบ"/>
       </div>
-
-      <div class="login_form" style="float:left;"><a href="?page=forgetpass">ลืมรหัสผ่าน ?</a></div>
-      <div class="login_form" style="float:right;"><a href="../index.php">กลับสู่หน้าหลัก</a></div>
       </form>
+      <div class="clean"></div>
+      <div id="reserve">© By SakuraYim All Right Reserved 2015</div>
     </div>
   </div>
-</div>
+
 </form>
-<div class="footer">
-<div class="footer-coppy">
-  Copyright © 2015 standardtour.com. All Rights Reserved. | Develop by ...
-</div>
-</div>
+
 </body>
 </html>
 
