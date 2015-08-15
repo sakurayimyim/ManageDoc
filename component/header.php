@@ -1,0 +1,12 @@
+  <div class="menu-header">
+  <div class="company-logo">
+  	<img src="images/logoIEC.png" width="32" height="32">
+  </div>	
+  <div class="company-name">
+    บริษัท อินทิเกรเทด เอนเตอร์ไพร์ส คอนซัลแตนท์ จำกัด
+  </div>
+    <div class="header-bar-name">
+    <img src="images/profile.png" class="mar_r5" width="30" height="30">
+      <?=$_SESSION['FullName']?>
+    </div>
+  </div>
