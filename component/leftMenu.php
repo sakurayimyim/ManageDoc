@@ -22,28 +22,28 @@
   <div class="menu-title">
     เมนูจัดการข้อมูลในระบบ
   </div>
-  <div class="left-menu-head pointer left-img-1">
+  <div class="left-menu-head pointer left-img-1" id="NewMember">
   <div class="menu-left-addmem"></div>
     <div class="pdd-l20 m-head">
         เพิ่มสมาชิก
     </div>
   </div>
-  <div class="left-menu-head pointer left-img-2">
+  <div class="left-menu-head pointer left-img-2" id="ListMember">
     <div class="pdd-l20 m-head">
         รายการสมาชิก
     </div>
   </div>
-  <div class="left-menu-head pointer left-img-3">
+  <div class="left-menu-head pointer left-img-3" id="NewDoc">
     <div class="pdd-l20 m-head">
         สร้างเอกสาร
     </div>
   </div>
-  <div class="left-menu-head pointer left-img-4">
+  <div class="left-menu-head pointer left-img-4" id="ListDoc">
     <div class="pdd-l20 m-head">
         รายการเอกสารทั้งหมด
     </div>
   </div>
-  <div class="left-menu-head pointer left-img-5">
+  <div class="left-menu-head pointer left-img-5" id="ManageProfile">
     <div class="pdd-l20 m-head">
          จัดการข้อมูลส่วนตัว
     </div>

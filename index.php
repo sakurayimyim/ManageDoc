@@ -35,11 +35,14 @@
   if ($_GET['page']!=''){ 
         $page= $_GET['page']; 
       }else{
-        $page= 'home';
+        $page= 'listDoc';
         }
         switch ($page){
-          case 'home' : include('include/listDoc.php'); break;
+          case 'listDoc' : include('include/listDoc.php'); break;
           case 'newDoc' : include('include/newDoc.php'); break;
+          case 'newMember' : include('include/newMember.php'); break;
+          case 'manageProfile' : include('include/manageProfile.php'); break;
+          case 'listMember' : include('include/listMember.php'); break;
           case 'logout' : logout(); break;
           }
      ?>  
@@ -88,6 +91,21 @@ function AlertError(){
 }
 $("#Logout").on('click',function(){
   window.location.href = 'index.php?page=logout';
-})
+});
+$("#NewMember").on('click',function(){
+  window.location.href = 'index.php?page=newMember';
+});
+$("#ListMember").on('click',function(){
+  window.location.href = 'index.php?page=listMember';
+});
+$("#NewDoc").on('click',function(){
+  window.location.href = 'index.php?page=newDoc';
+});
+$("#ListDoc").on('click',function(){
+  window.location.href = 'index.php?page=listDoc';
+});
+$("#ManageProfile").on('click',function(){
+  window.location.href = 'index.php?page=manageProfile';
+});
 </script>
  
