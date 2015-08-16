@@ -1,4 +1,4 @@
-<?php
+<?php session_start(); 
 	include('../config/config.php');
 
 	$Username = $_POST['Username'];
@@ -18,8 +18,7 @@
 	$Province = $_POST['Province'];
 	$Aumpur = $_POST['Aumpur'];
 
-	$sqlInset = "INSERT INTO member 
-	VALUES('',
+	$sqlInset = "INSERT INTO member VALUES('',
 		'$MemberNo',
 		'$Username',
 		'$Password',
@@ -27,6 +26,7 @@
 		'$FirstName',
 		'$LastName',
 		'$Institute',
+		'',
 		'',
 		'$PhoneNum',
 		'$Mobile',

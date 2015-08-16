@@ -61,7 +61,7 @@ $("#submit").on('click',function(){
             if(data.IsResult == true){
               AlertSuccess();
               if(data.MemberType == 1){
-                window.location.href = 'index.php?page=home';
+                window.location.href = 'index.php?page=listDoc';
               }
             }else{
               AlertError();

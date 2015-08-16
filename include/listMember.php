@@ -17,26 +17,42 @@
         </tr>
     </thead>
     <tbody>
+    <?php 
+      $sqlMember = "select * from member";
+      $sqlQuery = mysql_db_query($dbname, $sqlMember);
+      while ($objResult =  mysql_fetch_array($sqlQuery)) {
+        ?>
         <tr>
-            <td>ซากุระ</td>
-            <td>พุทธหล่อง</td>
-            <td>ผู้ดูแลระบบ</td>
-            <td>เปิดใช้งาน</td>
-            <td>087-98745661</td>
-            <td>sakura@hotmail.com</td>
-            <td><a href="">Edit</a></td>
+            <td><?=$objResult['MemberFirstName']?></td>
+            <td><?=$objResult['MemberLastName']?></td>
+            <td>
+            <?php 
+            if($objResult['MemberType'] == 1){
+              echo "ผู้ดูแลกิจการ";
+            }else if($objResult['MemberType'] == 2){
+              echo "ผู้ดูแลระบบ";
+            }else{
+              echo "เจ้าหน้าที่ธนาคาร";
+            }
+            ?>
+            </td>
+            <td>
+            <?php 
+            if($objResult['Status'] == 1){
+              echo "เปิดใช้งาน";
+            }else if($objResult['Status'] == 2){
+              echo "ปิดใช้งาน/บล๊อก";
+            }
+            ?>
+            </td>
+            <td><?=$objResult['PhoneNum']?></td>
+            <td><?=$objResult['Email']?></td>
+            <td><a href="?page=editMember&id=<?=$objResult['MemberID']?>">Edit</a></td>
             <td><a href="">Delete</a></td>
         </tr>
-        <tr>
-            <td>ซากุระ</td>
-            <td>พุทธหล่อง</td>
-            <td>ผู้ดูแลระบบ</td>
-            <td>เปิดใช้งาน</td>
-            <td>087-98745661</td>
-            <td>sakura@hotmail.com</td>
-            <td><a href="">Edit</a></td>
-            <td><a href="">Delete</a></td>
-        </tr>
+        <?php
+      }
+      ?>
     </tbody>
 </table>
   </div>

@@ -46,6 +46,7 @@
           case 'listDoc' : include('include/listDoc.php'); break;
           case 'newDoc' : include('include/newDoc.php'); break;
           case 'newMember' : include('include/newMember.php'); break;
+          case 'editMember' : include('include/editMember.php'); break;
           case 'manageProfile' : include('include/manageProfile.php'); break;
           case 'listMember' : include('include/listMember.php'); break;
           case 'logout' : logout(); break;

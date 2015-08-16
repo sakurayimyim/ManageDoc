@@ -21,12 +21,12 @@
 		<div class="clean"></div>
 		<div class="info_left">
 			<div class="label_left"><font color="red">*</font> รหัสผ่าน :</div>
-			<div class="label_right"><input type="text" class="form-control" name="Password" ></div>
+			<div class="label_right"><input type="password" class="form-control" name="Password" id="Password" ></div>
 		</div>
-		<div class="clean"></div>
+		<div class="clean"></div> 
 		<div class="info_left">
 			<div class="label_left"><font color="red">*</font> ยืนยันรหัสผ่าน :</div>
-			<div class="label_right"><input type="text" class="form-control" name="CfmPassword" ></div>
+			<div class="label_right"><input type="password" class="form-control" name="CfmPassword" ></div>
 		</div>
 		<div class="clean"></div>
 		<div class="info_left">
@@ -126,6 +126,11 @@
    </div>
 </div>
 </div>
+<div class="clean mt-57"></div>
+<div class="content-list">
+  <div class="content-body">
+	<input type="button" id="SubmitFrmNewMember" class="btn btn-success" value="บันทึก"></div>
+  </div>
 </form>
 <script type="text/javascript">
 	$.validator.addMethod('selectcheck', function (value) {
@@ -163,20 +168,22 @@
 	    messages: {
 	        Username: {
 	            required : "กรุณากรอกข้อมูล",
+	            maxlength : "กรุณากรอกชื่อผู้ใช้ 4 ถึง 20 ตัวอักษร",
 	            minlength : "กรุณากรอกชื่อผู้ใช้ 4 ถึง 20 ตัวอักษร"
 	        }, 
-	        Passwor: {
+	        Password: {
 	        	 required : "กรุณากรอกข้อมูล",
-	        	 minlength : "กรุณากรอกหัสผ่าน 6 ถึง 20 ตัวอักษร"
+	        	 minlength : "กรุณากรอกหัสผ่าน 6 ถึง 20 ตัวอักษร",
+	        	 maxlength : "กรุณากรอกชื่อผู้ใช้ 6 ถึง 20 ตัวอักษร",
 	        },
 	        CfmPassword: {
 	        	equalTo : "กรุณากรอกรหัสผ่านให้ตรงกัน",
 	        }     
 	    },
 	    });    
-	$("#submit").on('click',function(){
-		//if($("#NewMember").valid())
-    $.ajax({
+	$("#SubmitFrmNewMember").on('click',function(){
+		if($("#frmNewMember").valid()){
+			$.ajax({
            type: "POST",
            url: 'include/insertMember.php',
            data: $("#frmNewMember").serialize(), 
@@ -185,12 +192,14 @@
             console.log(data);
             if(data.IsResult == true){
               AlertSuccess();
-                //window.location.href = 'index.php?page=listMember&id='+data.MemberID;
+                window.location.href = 'index.php?page=listMember&id='+data.MemberID;
             }else{
               AlertError();
             }
            }
          });
+		}
+    
     return false;
 });
 </script>
