@@ -737,7 +737,16 @@ ul.left-menu li.active{
   .search-input{
     height: 30px;
   }
-
+/**************************** Member By Yim *******************/
+#frmNewMember .info_left{
+	width: 50%;
+}
+#frmNewMember .label_left{
+	width: 30%;
+}
+#frmNewMember .label_right{
+		width: 60%;
+}
 /**************************** New Document By Sakura *******************/
 .info{
 	width: 100%;
