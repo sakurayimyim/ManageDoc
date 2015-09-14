@@ -1,7 +1,7 @@
 <?php session_start(); 
 include('../config/config.php');
 $Username = $_POST['Username'];
-$Password = $_POST['Password'];
+$Password = base64_encode($_POST['Password']);
 if($Username != "" && $Password != ""){
 	$sql = "select * from member where Username = '$Username' and Password = '$Password'";
 	$sqlResult = mysql_db_query($dbname,$sql);

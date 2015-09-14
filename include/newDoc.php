@@ -108,7 +108,6 @@
 $('#newDocument a').click(function (e) {
   e.preventDefault()
   $(this).tab('show')
-  console.log($(this))
 })
 </script>
 

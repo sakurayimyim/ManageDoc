@@ -17,7 +17,15 @@ body{
 	font-family: ThaiSans Neue ; 
 	src: url( font/ThaiSansNeue-Regular.ttf) format("truetype"); 
 }
-
+.cur-pointer{
+	cursor: pointer;
+}
+.f-green{
+	color:green;
+}
+.f-red{
+	color:red;
+}
 a {
 text-decoration: none;
 

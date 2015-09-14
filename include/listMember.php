@@ -9,9 +9,9 @@
           <th width="18%">ชื่อ</th>
           <th width="18%">นามสกุล</th>
           <th width="14%">ประเภทผู้ใช้</th>
-          <th width="10%">สถานะ</th>
           <th width="15%">เบอร์โทรศัพท์</th>
           <th width="15%">อีเมล์</th>
+          <th width="10%">สถานะ</th>
           <th></th>
           <th></th>
         </tr>
@@ -36,19 +36,19 @@
             }
             ?>
             </td>
+            <td><?=$objResult['PhoneNum']?></td>
+            <td><?=$objResult['Email']?></td>
             <td>
             <?php 
             if($objResult['Status'] == 1){
-              echo "เปิดใช้งาน";
+              echo "<span class='f-green'>เปิดใช้งาน</span>";
             }else if($objResult['Status'] == 2){
-              echo "ปิดใช้งาน/บล๊อก";
+              echo "<span class='f-red'>ปิดใช้งาน/บล๊อก</span>";
             }
             ?>
             </td>
-            <td><?=$objResult['PhoneNum']?></td>
-            <td><?=$objResult['Email']?></td>
             <td><a href="?page=editMember&id=<?=$objResult['MemberID']?>">Edit</a></td>
-            <td><a href="">Delete</a></td>
+            <td><a class="cur-pointer" onClick="MemberDel(<?=$objResult['MemberID']?>)" >Delete</a></td>
         </tr>
         <?php
       }
@@ -56,5 +56,5 @@
     </tbody>
 </table>
   </div>
-
 </div>
+<script src="js/member.js"></script>

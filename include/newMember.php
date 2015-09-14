@@ -1,4 +1,4 @@
-<form id="frmNewMember">
+<form id="frmNewMember" class="from-member">  
 <div class="content-list">
   <div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">	
   <div class="content-header">
@@ -45,7 +45,7 @@
 		<div class="info_left">
 			<div class="label_left"><font color="red">*</font> ประเภทผู้ใช้ :</div>
 			<div class="label_right">
-				<select class="form-control form-w220" name="MemberType">
+				<select class="form-control form-w220" name="MemberType" id="MemberType">
 					<option value="1">ผู้ดูแลกิจการ</option>
 					<option value="2" selected="selected">ผู้ดูแลระบบ</option>
 					<option value="3">เจ้าหน้าที่ธนาคาร</option>
@@ -53,9 +53,9 @@
 			</div>
 		</div>
 		<div class="info_left">
-			<div class="label_left"><font color="red">*</font> สถาบัน :</div>
+			<div class="label_left"><font color="red"></font> สถาบัน :</div>
 			<div class="label_right">
-			<select class="form-control form-w220" name="Institute">
+			<select class="form-control form-w220" name="Institute" id="Institute" disabled>
 					<option value="0">เลือกสถาบัน</option>
 					<option value="1">UOB</option>
 				</select>
@@ -132,77 +132,7 @@
 	<input type="button" id="SubmitFrmNewMember" class="btn btn-success" value="บันทึก"></div>
   </div>
 </form>
-<script type="text/javascript">
-	$.validator.addMethod('selectcheck', function (value) {
-        return (value != '0');
-    }, "กรุณาเลือกข้อมูล");
-	$("#frmNewMember").validate({
-	    rules : {
-	    		Username : {
-	    			required : true,
-	    			minlength : 4,
-	    			maxlength : 20
-	    		},
-                Password : {
-                	required : true,
-                    minlength : 6,
-                    maxlength : 20
-                },
-                CfmPassword : {
-                    equalTo : "#Password"
-                },
-                FirstName : {
-                	minlength : 2,
-                	maxlength : 255
-                },
-                MemberType : {
-                	selectcheck: true
-                },
-                MemberType : {
-                	selectcheck: true
-                },
-                Institute : {
-                	selectcheck: true
-                }
-            },
-	    messages: {
-	        Username: {
-	            required : "กรุณากรอกข้อมูล",
-	            maxlength : "กรุณากรอกชื่อผู้ใช้ 4 ถึง 20 ตัวอักษร",
-	            minlength : "กรุณากรอกชื่อผู้ใช้ 4 ถึง 20 ตัวอักษร"
-	        }, 
-	        Password: {
-	        	 required : "กรุณากรอกข้อมูล",
-	        	 minlength : "กรุณากรอกหัสผ่าน 6 ถึง 20 ตัวอักษร",
-	        	 maxlength : "กรุณากรอกชื่อผู้ใช้ 6 ถึง 20 ตัวอักษร",
-	        },
-	        CfmPassword: {
-	        	equalTo : "กรุณากรอกรหัสผ่านให้ตรงกัน",
-	        }     
-	    },
-	    });    
-	$("#SubmitFrmNewMember").on('click',function(){
-		if($("#frmNewMember").valid()){
-			$.ajax({
-           type: "POST",
-           url: 'include/insertMember.php',
-           data: $("#frmNewMember").serialize(), 
-           success: function(data)
-           {
-            console.log(data);
-            if(data.IsResult == true){
-              AlertSuccess();
-                window.location.href = 'index.php?page=listMember&id='+data.MemberID;
-            }else{
-              AlertError();
-            }
-           }
-         });
-		}
-    
-    return false;
-});
-</script>
+<script src="js/member.js"></script>
 
 
 

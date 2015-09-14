@@ -21,7 +21,7 @@
 	$sqlInset = "INSERT INTO member VALUES('',
 		'$MemberNo',
 		'$Username',
-		'$Password',
+		'".base64_encode($Password)."',
 		'$MemberType',
 		'$FirstName',
 		'$LastName',

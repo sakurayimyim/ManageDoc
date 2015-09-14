@@ -4,7 +4,8 @@
 	$sqlQuery = mysql_db_query($dbname, $sqlMember);
 	$objResult = mysql_fetch_array($sqlQuery);
 ?>
-<form id="frmEditMember">
+<form id="frmEditMember" class="from-member">
+<input type="hidden" name="MemberID" value="<?=$objResult['MemberID']?>">
 <div class="content-list">
   <div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">	
   <div class="content-header">
@@ -27,12 +28,12 @@
 		<div class="clean"></div>
 		<div class="info_left">
 			<div class="label_left"><font color="red">*</font> รหัสผ่าน :</div>
-			<div class="label_right"><input type="password" class="form-control" name="Password" id="Password" value="<?=$objResult['Password']?>" ></div>
+			<div class="label_right"><input type="password" class="form-control" name="Password" id="Password" value="<? echo base64_decode($objResult['Password']) ?>" ></div>
 		</div>
 		<div class="clean"></div> 
 		<div class="info_left">
 			<div class="label_left"><font color="red">*</font> ยืนยันรหัสผ่าน :</div>
-			<div class="label_right"><input type="password" class="form-control" name="CfmPassword" value="<?=$objResult['Password']?>" ></div>
+			<div class="label_right"><input type="password" class="form-control" name="CfmPassword" value="<? echo base64_decode($objResult['Password']) ?>" ></div>
 		</div>
 		<div class="clean"></div>
 		<div class="info_left">
@@ -51,7 +52,7 @@
 		<div class="info_left">
 			<div class="label_left"><font color="red">*</font> ประเภทผู้ใช้ :</div>
 			<div class="label_right">
-				<select class="form-control form-w220" name="MemberType">
+				<select class="form-control form-w220" name="MemberType" id="MemberType">
 					<option value="1" <?php if($objResult['MemberLastName'] == 1){ ?> selected="selected"<? } ?>>ผู้ดูแลกิจการ</option>
 					<option value="2" <?php if($objResult['MemberLastName'] == 2){ ?> selected="selected"<? } ?>>ผู้ดูแลระบบ</option>
 					<option value="3" <?php if($objResult['MemberLastName'] == 3){ ?> selected="selected"<? } ?>>เจ้าหน้าที่ธนาคาร</option>
@@ -61,7 +62,7 @@
 		<div class="info_left">
 			<div class="label_left"><font color="red">*</font> สถาบัน :</div>
 			<div class="label_right">
-			<select class="form-control form-w220" name="Institute">
+			<select class="form-control form-w220" name="Institute" id="Institute" disabled>
 					<option value="0" <?php if($objResult['InstituteID'] == 0){ ?> selected="selected"<? } ?>>เลือกสถาบัน</option>
 					<option value="1" <?php if($objResult['InstituteID'] == 1){ ?> selected="selected"<? } ?>>UOB</option>
 				</select>
@@ -138,76 +139,14 @@
 	<input type="button" id="SubmitFrmEditMember" class="btn btn-success" value="บันทึก"></div>
   </div>
 </form>
+<script src="js/member.js"></script>
 <script type="text/javascript">
-	$.validator.addMethod('selectcheck', function (value) {
-        return (value != '0');
-    }, "กรุณาเลือกข้อมูล");
-	$("#frmEditMember").validate({
-	    rules : {
-	    		Username : {
-	    			required : true,
-	    			minlength : 4,
-	    			maxlength : 20
-	    		},
-                Password : {
-                	required : true,
-                    minlength : 6,
-                    maxlength : 20
-                },
-                CfmPassword : {
-                    equalTo : "#Password"
-                },
-                FirstName : {
-                	minlength : 2,
-                	maxlength : 255
-                },
-                MemberType : {
-                	selectcheck: true
-                },
-                MemberType : {
-                	selectcheck: true
-                },
-                Institute : {
-                	selectcheck: true
-                }
-            },
-	    messages: {
-	        Username: {
-	            required : "กรุณากรอกข้อมูล",
-	            maxlength : "กรุณากรอกชื่อผู้ใช้ 4 ถึง 20 ตัวอักษร",
-	            minlength : "กรุณากรอกชื่อผู้ใช้ 4 ถึง 20 ตัวอักษร"
-	        }, 
-	        Password: {
-	        	 required : "กรุณากรอกข้อมูล",
-	        	 minlength : "กรุณากรอกหัสผ่าน 6 ถึง 20 ตัวอักษร",
-	        	 maxlength : "กรุณากรอกชื่อผู้ใช้ 6 ถึง 20 ตัวอักษร",
-	        },
-	        CfmPassword: {
-	        	equalTo : "กรุณากรอกรหัสผ่านให้ตรงกัน",
-	        }     
-	    },
-	    });    
-	$("#SubmitFrmEditMember").on('click',function(){
-		if($("#frmEditMember").valid()){
-			$.ajax({
-           type: "POST",
-           url: 'include/insertMember.php',
-           data: $("#frmNewMember").serialize(), 
-           success: function(data)
-           {
-            console.log(data);
-            if(data.IsResult == true){
-              AlertSuccess();
-                window.location.href = 'index.php?page=listMember&id='+data.MemberID;
-            }else{
-              AlertError();
-            }
-           }
-         });
-		}
-    
-    return false;
-});
+$( document ).ready(function(){
+	var Institute = '<?=$objResult['InstituteID']?>';
+	if(Institute != 0 && Institute != ""){
+		$("#Institute").prop('disabled',false);
+	}
+})
 </script>
 
 

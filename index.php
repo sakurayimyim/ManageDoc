@@ -17,6 +17,7 @@
 <!-- JS -->
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/bootbox.min.js"></script>
 <script src="js/jquery.dataTables.min.js"></script>
 <script src="js/jquery.validate.min.js"></script>
 
@@ -47,6 +48,7 @@
           case 'newDoc' : include('include/newDoc.php'); break;
           case 'newMember' : include('include/newMember.php'); break;
           case 'editMember' : include('include/editMember.php'); break;
+          case 'deleteMember' : include('include/deleteMember.php'); break;
           case 'manageProfile' : include('include/manageProfile.php'); break;
           case 'listMember' : include('include/listMember.php'); break;
           case 'logout' : logout(); break;
