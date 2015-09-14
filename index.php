@@ -12,12 +12,15 @@
     <title></title>
 </head>
 <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/bootstrap-datepicker3.standalone.min.css" type="text/css"/>
 <link rel="stylesheet" href="css/style.css" type="text/css"/>
 <link rel="stylesheet" href="css/jquery.dataTables.min.css" type="text/css"/>
 <!-- JS -->
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/bootbox.min.js"></script>
+<script src="js/bootstrap-datepicker.min.js"></script>
+<script src="js/bootstrap-datepicker.th.min.js"></script>
 <script src="js/jquery.dataTables.min.js"></script>
 <script src="js/jquery.validate.min.js"></script>
 
@@ -84,33 +87,5 @@ $(document).ready( function () {
     $('#table_id_filter input').addClass('form-control search-input wflr'); // <-- add this line
     $('#table_id_filter label').css('line-height', '30px');
 });
-function AlertSuccess(){
-  $(".alert-success").fadeIn( "slow", function() {
-    $(".alert-success").delay(2000).fadeOut(400);
-  });
-}
-function AlertError(){
-  $(".alert-error").fadeIn( "slow", function() {
-    $(".alert-error").delay(2000).fadeOut(400);
-  });
-}
-$("#Logout").on('click',function(){
-  window.location.href = 'index.php?page=logout';
-});
-$("#NewMember").on('click',function(){
-  window.location.href = 'index.php?page=newMember';
-});
-$("#ListMember").on('click',function(){
-  window.location.href = 'index.php?page=listMember';
-});
-$("#NewDoc").on('click',function(){
-  window.location.href = 'index.php?page=newDoc';
-});
-$("#ListDoc").on('click',function(){
-  window.location.href = 'index.php?page=listDoc';
-});
-$("#ManageProfile").on('click',function(){
-  window.location.href = 'index.php?page=manageProfile';
-});
 </script>
- 
+<script src="js/default.js"></script>

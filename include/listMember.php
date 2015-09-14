@@ -43,7 +43,7 @@
             if($objResult['Status'] == 1){
               echo "<span class='f-green'>เปิดใช้งาน</span>";
             }else if($objResult['Status'] == 2){
-              echo "<span class='f-red'>ปิดใช้งาน/บล๊อก</span>";
+              echo "<span class='f-red'>ปิดใช้งาน</span>";
             }
             ?>
             </td>

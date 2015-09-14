@@ -73,7 +73,7 @@
 			<div class="label_right">
 				<select class="form-control form-w220" name="MemberStatus">
 					<option value="1" <?php if($objResult['Status'] == 1){ ?> selected="selected"<? } ?>>เปิดใช้งาน</option>
-					<option value="2" <?php if($objResult['Status'] == 2){ ?> selected="selected"<? } ?>>ปิดใช้งาน/บล๊อก</option>
+					<option value="2" <?php if($objResult['Status'] == 2){ ?> selected="selected"<? } ?>>ปิดใช้งาน</option>
 				</select>
 			</div>
 		</div>

@@ -66,7 +66,7 @@
 			<div class="label_right">
 				<select class="form-control form-w220" name="MemberStatus">
 					<option value="1">เปิดใช้งาน</option>
-					<option value="2">ปิดใช้งาน/บล๊อก</option>
+					<option value="2">ปิดใช้งาน</option>
 				</select>
 			</div>
 		</div>
@@ -133,6 +133,7 @@
   </div>
 </form>
 <script src="js/member.js"></script>
+
 
 
 
