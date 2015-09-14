@@ -746,26 +746,30 @@ ul.left-menu li.active{
 }
 .info_left{
 	float: left;
-	width: 50%;
+	width: 100%;
 	min-width: 300px;
+
 }
 
 .label_left{
-	width: 30%;
+	width: 250px;
 	margin-top: 20px;
 	float: left;
 	text-align: right;
 }
 
-.form-w220{
-	width: 200px;
+.form-w250{
+	width: 250px;
+}
+.form-w120{
+	width: 120px;
 }
 .list-minh650{
 	min-height: 650px;
 }
 .label_right{
-	width: 60%;
-	margin: 15px 0px 0px 15px;
+	width: 500px;
+	margin: 15px 0px 0px 20px;
 	float: left;
 }
 
@@ -823,7 +827,7 @@ ul.left-menu li.active{
 
 .incontent{
 	width:100%;
-	padding:20px;
+	padding:30px;
 	background:#fff;
 	border: 1px solid #ddd;
 	border-top: none;
