@@ -54,6 +54,7 @@
           case 'deleteMember' : include('include/deleteMember.php'); break;
           case 'manageProfile' : include('include/manageProfile.php'); break;
           case 'listMember' : include('include/listMember.php'); break;
+          case 'detailDoc' : include('include/detailDoc.php'); break;
           case 'logout' : logout(); break;
           }
      ?>  
