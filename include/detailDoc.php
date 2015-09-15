@@ -1,4 +1,5 @@
  <div class="content-list">
+ <div class="detai_subj">ธนาคารกรุงไทย แอคซ่า จำกัด</div>
  <div class="content_detail">
   	<div class="detail_form">
   		<div class="detail_forml">รหัสงานบริษัท :</div>
@@ -59,7 +60,8 @@
   <div class="clean"></div>
  </div>
 
-<div class="clean30"></div>
+<div class="clean"></div>
+<div class="detai_subj" style="font-size:24px;">รายละเอียดงานติดปัญหา</div>
 	<table class="table">
 		<tr>
 			<td width="7%">ลำดับที่</td>

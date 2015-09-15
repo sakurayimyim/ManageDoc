@@ -883,9 +883,18 @@ ul.left-menu li.active{
 
 
 .content_detail{
-	padding: 50px 0px 20px 0px;
+	padding: 60px 0px 20px 0px;
 }
 
+.detai_subj{
+	height: 60px;
+	float: left;
+	line-height: 50px;
+	font-size: 28px;
+	font-family: 'ThaiSans Neue' ;
+	color: #0866C6;
+	margin-left: 10px;
+}
 
 
 
