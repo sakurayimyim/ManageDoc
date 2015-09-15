@@ -216,7 +216,7 @@ padding: 0px 0px 10px 0px;
 	float:left;
 	width:100%;
 	min-width:500px;
-	background-color: #eeeeee;
+	background-color: #D9E0E7;
 	padding-bottom: 40px;
 	}
 
@@ -844,3 +844,49 @@ ul.left-menu li.active{
 }
 
 /********************Panel Tab Modified***********************/
+
+/********************* Detail Doc ***************************/
+.detail_form{
+	width: 58%;
+	min-height: 40px;
+	float: left;
+	border-top:1px solid #e4e4e4;
+	font-size: 13px;
+}
+.detail_w45{
+	width: 42%;
+}
+
+.detail_forml{
+	width: 39%;
+	float: left;
+	min-height: 40px;
+	background-color: #f2f2f2;
+	text-align: left;
+	padding:10px 10px 0px 10px;
+	border-right:1px solid #e4e4e4;
+}
+
+.detail_l{
+	width: 49%;
+}
+.detail_formr{
+	width: 61%;
+	min-height: 40px;
+	float: left;
+	padding:10px 10px 0px 10px;
+	border-right:1px solid #e4e4e4;
+}
+.detail_r{
+	width: 51%;
+}
+
+
+.content_detail{
+	padding: 50px 0px 20px 0px;
+}
+
+
+
+
+/********************* Detail Doc ***************************/
