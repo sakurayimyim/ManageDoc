@@ -18,7 +18,7 @@
 	$Province = $_POST['Province'];
 	$Aumpur = $_POST['Aumpur'];
 
-	$sqlInset = "INSERT INTO member VALUES('',
+	$sqlInsert = "INSERT INTO member VALUES('',
 		'$MemberNo',
 		'$Username',
 		'".base64_encode($Password)."',
@@ -41,7 +41,7 @@
 		'".$_SESSION['MemberID']."',
 		NOW(),
 		'".$_SESSION['MemberID']."')";
-	$sqlQuery = mysql_db_query($dbname, $sqlInset);
+	$sqlQuery = mysql_db_query($dbname, $sqlInsert);
 	if($sqlQuery){
 		$MemberID = mysql_insert_id();
 		$json = array(
