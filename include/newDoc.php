@@ -38,11 +38,11 @@
 			<div class="label_right">
 				<select class="form-control" name="JuristicTypeID" id="JuristicTypeID">
 					<option value="0">กรุณาเลือกข้อมูล</option>
-					<option value="1"></option>
+					<option value="12">อื่นๆ(เพิ่มเติมภายหลัง)</option>
 				</select>
 			</div>
 		</div>
-		<div class="info_left">
+		<div class="info_left" id="JuristicTypeMore">
 			<div class="label_left">อื่นๆ(เพิ่มเติมภายหลัง)</div>
 			<div class="label_right"><input type="text" name="OtherJuristicType" id="OtherJuristicType" class="form-control" ></div>
 		</div>
@@ -327,11 +327,12 @@
 			<div class="label_right">
 				<select class="form-control" name="StatusPresentID" id="StatusPresentID">
 					<option value="0">กรุณาเลือกข้อมูล</option>
-					<option value="1"></option>
+					<option value="19">อยู่ระหว่างประสานงาน *งานตินปัญหากับลูกค้า</option>
+					<option value="20">อื่นๆ(เพิ่มเติมเองภายหลัง)</option>
 				</select>
 			</div>
 		</div>
-		<div class="info_left">
+		<div class="info_left" id="StatusPresentMore">
 			<div class="label_left">OtherStatusPresent</div>
 			<div class="label_right"><input type="text" name="OtherStatusPresent" id="OtherStatusPresent" class="form-control form-w250" ></div>
 		</div>
@@ -345,7 +346,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="info_left">
+		<div class="info_left" id="ProblemDetail">
 			<div class="label_left">รายละเอียดงานติดปัญหา :</div>
 			<div class="label_right">
 				<select class="form-control" name="ProblemID" id="ProblemID">
@@ -471,7 +472,7 @@
 </form>
 </div>
 
-
+<script src="js/doc.js"></script>
 <!--****************Script ***************************-->
 <script type="text/javascript">
 $('#newDocument a').click(function (e) {

@@ -745,9 +745,10 @@ ul.left-menu li.active{
 	width: 30%;
 }
 #frmNewMember .label_right{
-		width: 60%;
+	width: 60%;
 }
 /**************************** New Document By Sakura *******************/
+
 .info{
 	width: 100%;
 	min-height: 45px;
@@ -757,7 +758,6 @@ ul.left-menu li.active{
 	float: left;
 	width: 100%;
 	min-width: 300px;
-
 }
 
 .label_left{
@@ -805,7 +805,15 @@ ul.left-menu li.active{
 	height: 57px;
 	padding: 10px;
 }
-
+#JuristicTypeMore{
+	display: none;
+}
+#ProblemDetail{
+	display: none
+}
+#Solution{
+	display: none
+}
 
 /************** New Document By Sakura **********************************/
 
