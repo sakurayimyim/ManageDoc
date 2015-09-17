@@ -38,12 +38,12 @@
 			<div class="label_right">
 				<select class="form-control" name="JuristicTypeID" id="JuristicTypeID">
 					<option value="0">กรุณาเลือกข้อมูล</option>
-					<option value="12">อื่นๆ(เพิ่มเติมภายหลัง)</option>
+					<option value="12">อื่นๆ</option>
 				</select>
 			</div>
 		</div>
 		<div class="info_left" id="JuristicTypeMore">
-			<div class="label_left">อื่นๆ(เพิ่มเติมภายหลัง)</div>
+			<div class="label_left" ><font color="red">*</font> อื่น ๆ :</div>
 			<div class="label_right"><input type="text" name="OtherJuristicType" id="OtherJuristicType" class="form-control" ></div>
 		</div>
 		<div class="info_left">
@@ -465,7 +465,7 @@
 
 </div>
 <div class="clean mt-57"></div>
-<div class="content-list">
+<div class="content-save">
   <div class="content-body">
 	<input type="button" id="SubmitFrmNewDoc" class="btn btn-success" value="บันทึก"></div>
   </div>

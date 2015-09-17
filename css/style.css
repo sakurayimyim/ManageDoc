@@ -612,7 +612,11 @@ ul.left-menu li.active{
 	height:100%;
 	margin:78px 20px 0px 240px;
 	background-color: #FFF;
-
+}
+.content-save{
+	height:100%;
+	margin:70px 0px 0px 0px;
+	background-color: #FFF;
 }
 .company-name{
 	width: 50%;
