@@ -1,3 +1,6 @@
+ <?php
+  $sqlDocDetail = "SELECT * FROM document";
+ ?>
  <div class="content-list">
  <div class="detai_subj">ธนาคารกรุงไทย แอคซ่า จำกัด</div>
  <div class="content_detail">

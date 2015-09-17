@@ -20,14 +20,26 @@
 <div class="tab-content">
 <div role="tabpanel" id="pernelinf" class="tab-pane fade active in" aria-labelledby="pernelinf-tab">
 <div class="incontent">	
+<?php 
+	$sqlCountListNo = "SELECT ListNo, WorkCode FROM document order by ListNo DESC Limit 0,1";
+	$listNoQuery = mysql_db_query($dbname, $sqlCountListNo);
+	$data = mysql_fetch_array($listNoQuery);
+	$numList = $data['ListNo'] + 1;
+
+	$strNum = substr($data['WorkCode'],-3);
+	$strNum += 1;
+	$year = date("y");
+	$num = sprintf("%03d",$strNum);
+	$workCode = "IEC".$year.$num;
+?>
 	<div class="info">
 		<div class="info_left">
 			<div class="label_left"><font color="red">*</font> ลำดับที่ :</div>
-			<div class="label_right"><input name="ListNo" id="ListNo" type="text" class="form-control form-w120" ></div>
+			<div class="label_right"><input name="ListNo" id="ListNo" type="text" class="form-control form-w120" value="<?=$numList?>" ></div>
 		</div>
 		<div class="info_left">
 			<div class="label_left"><font color="red">*</font> รหัสงานบริษัท :</div>
-			<div class="label_right"><input name="WorkCode" id="WorkCode" type="text" class="form-control form-w250" ></div>
+			<div class="label_right"><input name="WorkCode" id="WorkCode" type="text" class="form-control form-w250" value="<?=$workCode?>" ></div>
 		</div>
 		<div class="info_left">
 			<div class="label_left"><font color="red">*</font> APP :</div>
@@ -38,7 +50,15 @@
 			<div class="label_right">
 				<select class="form-control" name="JuristicTypeID" id="JuristicTypeID">
 					<option value="0">กรุณาเลือกข้อมูล</option>
-					<option value="12">อื่นๆ</option>
+					<?php
+						$sqlJuristicType = "SELECT JuristicTypeID, JuristicTypeName FROM juristictype";
+						$juristicTypeQuery = mysql_db_query($dbname, $sqlJuristicType);
+						while ($objJur = mysql_fetch_array($juristicTypeQuery)) {
+					?>
+						<option value="<?=$objJur['JuristicTypeID']?>"><?=$objJur['JuristicTypeName']?></option>
+					<?php
+						}
+					?>
 				</select>
 			</div>
 		</div>

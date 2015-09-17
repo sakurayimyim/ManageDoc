@@ -1,3 +1,8 @@
+<style type="text/css">
+  .txt-center{
+    text-align: center;
+  }
+</style>
 <div class="content-list">
   <div class="content-header">
     เอกสารทั้งหมด
@@ -7,50 +12,34 @@
      <thead>
         <tr>
           <th width="35">ลำดับ</th>
-          <th width="70">เลขที่ออก</th>
-          <th>ทรัพย์</th>
-          <th width="40">สถาบัน</th>
-          <th>ชื่อลูกค้า</th>
-          <th width="45">ผู้ติดต่อ</th>
-          <th width="105">เบอร์โทร</th>
+          <th width="85">รหัสงานบริษัท</th>
+          <th width="145">เลขที่สัญญาสถาบัน/ลูกค้า</th>
+          <th width="40">ประเภทนิติกรรม</th>
+          <th>ชื่อลูกค้าสถาบัน/ลูกค้า</th>
+          <th width="45">สถานะปัจจุบัน</th>
+          <th class="txt-center" width="95">รายละเอียดงานติดปัญหา</th>
           <th></th>
           <th></th>
         </tr>
     </thead>
     <tbody>
+    <?php
+      $sqlDocDetail = "SELECT * FROM document";
+      $docQuery = mysql_db_query($dbname, $sqlDocDetail);
+      while ($objR = mysql_fetch_array($docQuery)) {
+      ?>
         <tr>
-          <td align="center">1</td>
-            <td>RG 10-01-01</td>
-            <td>จดทะเบียนกรรมสิทธิ์เครื่องจักร</td>
-            <td>BGPL</td>
-            <td>ห้างหุ้นส่วนจำกัด นิวเวิลด์ อินเตอร์เนชั่นแนล 0113526001234</td>
-            <td>คุณพรเทพ</td>
-            <td>038-891-974, 0851553042</td>
+          <td align="center"><?=$objR['ListNo']?></td>
+            <td><?=$objR['WorkCode']?></td>
+            <td><?=$objR['ContractNo']?></td>
+            <td><?=$objR['JuristicTypeID']?></td>
+            <td><?=$objR['CustomerName']?></td>
+            <td><?=$objR['StatusPresentID']?></td>
+            <td><?=$objR['']?></td>
             <td><a href="">Edit</a></td>
             <td><a href="">Delete</a></td>
         </tr>
-        <tr>
-          <td align="center">2</td>
-            <td>RG 10-01-02</td>
-            <td>จดทะเบียนกรรมสิทธิ์เครื่องจักร</td>
-            <td></td>
-            <td>บริษัท อีสต์โคสท์เฟอร์นิเทค จำกัด 0215542001139</td>
-            <td></td>
-            <td></td>
-            <td><a href="">Edit</a></td>
-            <td><a href="">Delete</a></td>
-        </tr>
-        <tr>
-          <td align="center">3</td>
-            <td>RG 10-01-03</td>
-            <td>จดทะเบียนกรรมสิทธิ์เครื่องจักร</td>
-            <td></td>
-            <td>บริษัท บางกอกสปริงอินดัสเตรียล จำกัด 0105520007381 และ บริษัท สมบูรณ์หล่อเหล็กเหนียวอุตสาหกรรม จำกัด 0105518003683</td>
-            <td></td>
-            <td></td>
-            <td><a href="">Edit</a></td>
-            <td><a href="">Delete</a></td>
-        </tr>
+        <?php } ?>
     </tbody>
 </table>
   </div>
