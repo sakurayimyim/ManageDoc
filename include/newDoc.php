@@ -71,7 +71,13 @@
 			<div class="label_right">
 				<select class="form-control" name="BankID" id="BankID">
 					<option value="0">กรุณาเลือกข้อมูล</option>
-					<option value="1"></option>
+					<?php
+						$sqlBank = "SELECT * FROM bank";
+						$bankQuery = mysql_db_query($dbname, $sqlBank);
+						while ($objBank = mysql_fetch_array($bankQuery)) {
+					?>
+						<option value="<?=$objBank['BankID']?>"><?=$objBank['BankName']?></option>
+					<?php } ?>
 				</select>
 			</div>
 		</div>
@@ -142,7 +148,7 @@
 		</div>
 		<div class="info_left">
 			<div class="label_left">ชื่อผู้ติดต่อ (2) :</div>
-			<div class="label_right"><input type="text" name="Contact2" id="Contact2" class="form-control" ></div>
+			<div class="label_right"><input type="text" name="Contact2" id="Contact2" class="form-control form-w250" ></div>
 		</div>
 		<div class="info_left">
 			<div class="label_left">เบอร์โทรศัพท์ :</div>
@@ -329,7 +335,13 @@
 			<div class="label_right">
 				<select class="form-control" name="ResponseEmpID" id="ResponseEmpID">
 					<option value="0">กรุณาเลือกข้อมูล</option>
-					<option value="1"></option>
+					<?php
+						$sqlEmp = "SELECT * FROM responseemp";
+						$empQuery = mysql_db_query($dbname, $sqlEmp);
+						while ($objEmp =  mysql_fetch_array($empQuery)) {
+					?>
+						<option value="<?=$objEmp['ResponseEmpID']?>"><?=$objEmp['ResponseEmpName']?></option>
+					<?php } ?>
 				</select>
 			</div>
 		</div>
@@ -338,7 +350,13 @@
 			<div class="label_right">
 				<select class="form-control " name="ResponseHeadID" id="ResponseHeadID">
 					<option value="0">กรุณาเลือกข้อมูล</option>
-					<option value="1"></option>
+					<?php
+						$sqlHead = "SELECT * FROM responsehead";
+						$headQuery = mysql_db_query($dbname, $sqlHead);
+						while ($objHead =  mysql_fetch_array($headQuery)) {
+					?>
+					<option value="<?=$objHead['ResponseHeadID']?>"><?=$objHead['ResponseHeadName']?></option>
+					<?php } ?>
 				</select>
 			</div>
 		</div>
@@ -346,9 +364,14 @@
 			<div class="label_left">สถานะปัจจุบัน :</div>
 			<div class="label_right">
 				<select class="form-control" name="StatusPresentID" id="StatusPresentID">
-					<option value="0">กรุณาเลือกข้อมูล</option>
-					<option value="19">อยู่ระหว่างประสานงาน *งานตินปัญหากับลูกค้า</option>
-					<option value="20">อื่นๆ(เพิ่มเติมเองภายหลัง)</option>
+				<option value="0">กรุณาเลือกข้อมูล</option>
+					<?php
+						$sqlStatus = "SELECT * FROM statuspresent";
+						$statusQuery = mysql_db_query($dbname, $sqlStatus);
+						while ($objStatus =  mysql_fetch_array($statusQuery)) {
+					?>
+						<option value="<?=$objStatus['StatusPresentID']?>"><?=$objStatus['StatusPresentName']?></option>
+					<?php } ?>
 				</select>
 			</div>
 		</div>
@@ -371,7 +394,13 @@
 			<div class="label_right">
 				<select class="form-control" name="ProblemID" id="ProblemID">
 					<option value="0">กรุณาเลือกข้อมูล</option>
-					<option value="1"></option>
+					<?php
+						$sqlProblem = "SELECT * FROM problem";
+						$problemQuery = mysql_db_query($dbname, $sqlProblem);
+						while ($objProblem =  mysql_fetch_array($problemQuery)) {
+					?>
+					<option value="<?=$objProblem['ProblemID']?>"><?=$objProblem['ProblemName']?></option>
+					<?php }?>
 				</select>
 			</div>
 		</div>
@@ -384,7 +413,13 @@
 			<div class="label_right">
 				<select class="form-control" name="SolutionID" id="SolutionID">
 					<option value="0">กรุณาเลือกข้อมูล</option>
-					<option value="1"></option>
+					<?php
+						$sqlSolution = "SELECT * FROM solution";
+						$solutionQuery = mysql_db_query($dbname, $sqlSolution);
+						while ($objSolution =  mysql_fetch_array($solutionQuery)) {
+					?>
+					<option value="<?=$objSolution['SolutionID']?>"><?=$objSolution['SolutionName']?></option>
+					<?php } ?>
 				</select>
 			</div>
 		</div>
