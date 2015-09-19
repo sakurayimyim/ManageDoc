@@ -929,6 +929,20 @@ ul.left-menu li.active{
 	margin-left: 10px;
 }
 
-
-
 /********************* Detail Doc ***************************/
+
+/************** List Data Table *****************************/
+table.dataTable.no-footer {
+	font-size: 13px;
+}
+table.dataTable.no-footer {
+    border-bottom: 1px solid #ddd !important;
+}
+table.dataTable thead th, table.dataTable thead td{
+	border-bottom: 1px solid #ddd !important;
+}
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+}

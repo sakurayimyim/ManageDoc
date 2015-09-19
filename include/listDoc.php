@@ -1,25 +1,35 @@
+
 <style type="text/css">
   .txt-center{
     text-align: center;
   }
+  .justicName{
+    width: 160px;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    
+  }
 </style>
+
 <div class="content-list">
   <div class="content-header">
     เอกสารทั้งหมด
   </div>
   <div class="content-body">
-      <table id="table_id" class="display">
+      <table id="table_id" class="display table-bordered">
      <thead>
         <tr>
-          <th width="35">ลำดับ</th>
-          <th width="85">รหัสงานบริษัท</th>
-          <th width="145">เลขที่สัญญาสถาบัน/ลูกค้า</th>
-          <th width="40">ประเภทนิติกรรม</th>
-          <th>ชื่อลูกค้าสถาบัน/ลูกค้า</th>
-          <th width="45">สถานะปัจจุบัน</th>
-          <th class="txt-center" width="95">รายละเอียดงานติดปัญหา</th>
-          <th></th>
-          <th></th>
+          <th width="10">#</th>
+          <th width="100">งาน</th>
+          <th width="180">เลขที่สัญญา</th>
+          <th>ประเภทนิติกรรม</th>
+          <th >ชื่อลูกค้าสถาบัน/ลูกค้า</th>
+          <th>สถานะปัจจุบัน</th>
+          <th class="txt-center">ปัญหา</th>
+          <th width="41" style="border-right:none;"></th>
         </tr>
     </thead>
     <tbody>
@@ -32,26 +42,28 @@
           <td align="center"><?=$objR['ListNo']?></td>
             <td><?=$objR['WorkCode']?></td>
             <td><?=$objR['ContractNo']?></td>
-            <td>
+            <td><div class="justicName">
             <?php
             $sqlJuristicType = "SELECT JuristicTypeID, JuristicTypeName FROM juristictype WHERE JuristicTypeID = '".$objR['JuristicTypeID']."'";
             $juristicTypeQuery = mysql_db_query($dbname, $sqlJuristicType);
             $objJur = mysql_fetch_array($juristicTypeQuery);
               echo $objJur['JuristicTypeName'];
             ?>
-            </td>
-            <td><?=$objR['CustomerName']?></td>
-            <td>
+            </div></td>
+            <td><div class="justicName">
+            <?=$objR['CustomerName']?></div></td>
+            <td><div class="justicName">
               <?php
-              $sqlStatus = "SELECT * FROM statuspresent where StatusPresentID = '".$objR['StatusPresentID']."'";
+              $sqlStatus = "SELECT StatusPresentID,StatusPresentName FROM statuspresent where StatusPresentID = '".$objR['StatusPresentID']."'";
               $statusQuery = mysql_db_query($dbname, $sqlStatus);
               $objStatus =  mysql_fetch_array($statusQuery);
-              echo $objStatus['StatusPresentID'];
+              echo $objStatus['StatusPresentName'];
               ?>
-            </td>
+            </div></td>
             <td></td>
-            <td><a href="">Edit</a></td>
-            <td><a href="">Delete</a></td>
+            <td style="border-right:none;">
+            <a href=""><img src="images/edit.png" width="24" height="24"></a>
+            <a href=""><img src="images/delete.png" width="24" height="24"></a></td>
         </tr>
         <?php } ?>
     </tbody>

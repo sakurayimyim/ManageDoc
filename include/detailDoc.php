@@ -1,6 +1,13 @@
- <?php
-  $sqlDocDetail = "SELECT * FROM document";
- ?>
+<?php $sql="select * from document where DocID=3";
+  $result=mysql_db_query($dbname,$sql);
+  $objResult=mysql_fetch_array($result);
+  $ArticleMainImage=$objResult['ArticleMainImage'];
+  $ArticleDate=$objResult['ArticleDate'];
+  $ViewCount=$objResult['ViewCount'];
+  $ArticleTitle=$objResult['ArticleTitle'];
+  $ArticleDetail=$objResult['ArticleDetail'];
+  $ModifyDate=$objResult['ModifyDate'];
+  ?>
  <div class="content-list">
  <div class="detai_subj">ธนาคารกรุงไทย แอคซ่า จำกัด</div>
  <div class="content_detail">
