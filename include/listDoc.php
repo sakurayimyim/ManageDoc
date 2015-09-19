@@ -22,14 +22,14 @@
       <table id="table_id" class="display table-bordered">
      <thead>
         <tr>
-          <th width="10">#</th>
-          <th width="100">งาน</th>
-          <th width="180">เลขที่สัญญา</th>
+          <th>#</th>
+          <th>รหัสงาน</th>
+          <th>เลขที่สัญญา</th>
           <th>ประเภทนิติกรรม</th>
           <th >ชื่อลูกค้าสถาบัน/ลูกค้า</th>
           <th>สถานะปัจจุบัน</th>
           <th class="txt-center">ปัญหา</th>
-          <th width="41" style="border-right:none;"></th>
+          <th style="border-right:none;"></th>
         </tr>
     </thead>
     <tbody>
@@ -69,5 +69,23 @@
     </tbody>
 </table>
   </div>
-
 </div>
+<script type="text/javascript">
+$(document).ready( function () {
+    $('#table_id').DataTable({
+    "bSort": false,
+    "bAutoWidth": false,
+     aoColumns : [
+      { "sWidth": "45px"},
+      { "sWidth": "85px"},
+      { "sWidth": "145px"},
+      { "sWidth": "105px"},
+      { "sWidth": "105px"},
+      { "sWidth": "105px"},
+      { "sWidth": "33px"},
+    ]
+});
+    $('#table_id_filter input').addClass('form-control search-input wflr'); // <-- add this line
+    $('#table_id_filter label').css('line-height', '30px');
+});
+</script>

@@ -1,3 +1,10 @@
+<style type="text/css">
+  .menu-left-newMem-active{
+  color: #ffffff;
+  background: #0866C6  url(../images/leftmenu/add-userw.png) 20px 12px no-repeat;
+
+}
+</style>
 <div class="menu-left">
   <div class="menu-profile"> 
   <div class="menu-profile-img">
@@ -22,7 +29,7 @@
   <div class="menu-title">
     เมนูจัดการข้อมูลในระบบ
   </div>
-  <div class="left-menu-head pointer left-img-1" id="NewMember">
+  <div class="left-menu-head pointer left-img-1 <?php if($_GET['page'] == 'newMember'){ echo "menu-left-newMem-active"; } ?>" id="NewMember">
   <div class="menu-left-addmem"></div>
     <div class="pdd-l20 m-head">
         เพิ่มสมาชิก

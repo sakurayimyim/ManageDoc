@@ -1,6 +1,7 @@
 <?php 
   session_start(); 
   include('config/config.php');
+  include('lib/lib.php');
   if($_SESSION['MemberID'] == ""){
     echo "<script>window.location = '/ManageDoc/login.php';</script>";
   }
@@ -82,11 +83,4 @@ echo "<meta http-equiv='refresh' content='1; url=?bpage=homepage'>";
 }*/
 }
 ?>
-<script type="text/javascript">
-$(document).ready( function () {
-    $('#table_id').DataTable();
-    $('#table_id_filter input').addClass('form-control search-input wflr'); // <-- add this line
-    $('#table_id_filter label').css('line-height', '30px');
-});
-</script>
 <script src="js/default.js"></script>
