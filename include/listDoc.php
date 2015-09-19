@@ -32,10 +32,24 @@
           <td align="center"><?=$objR['ListNo']?></td>
             <td><?=$objR['WorkCode']?></td>
             <td><?=$objR['ContractNo']?></td>
-            <td><?=$objR['JuristicTypeID']?></td>
+            <td>
+            <?php
+            $sqlJuristicType = "SELECT JuristicTypeID, JuristicTypeName FROM juristictype WHERE JuristicTypeID = '".$objR['JuristicTypeID']."'";
+            $juristicTypeQuery = mysql_db_query($dbname, $sqlJuristicType);
+            $objJur = mysql_fetch_array($juristicTypeQuery);
+              echo $objJur['JuristicTypeName'];
+            ?>
+            </td>
             <td><?=$objR['CustomerName']?></td>
-            <td><?=$objR['StatusPresentID']?></td>
-            <td><?=$objR['']?></td>
+            <td>
+              <?php
+              $sqlStatus = "SELECT * FROM statuspresent where StatusPresentID = '".$objR['StatusPresentID']."'";
+              $statusQuery = mysql_db_query($dbname, $sqlStatus);
+              $objStatus =  mysql_fetch_array($statusQuery);
+              echo $objStatus['StatusPresentID'];
+              ?>
+            </td>
+            <td></td>
             <td><a href="">Edit</a></td>
             <td><a href="">Delete</a></td>
         </tr>
