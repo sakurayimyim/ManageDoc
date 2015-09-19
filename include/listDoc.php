@@ -74,16 +74,16 @@
 $(document).ready( function () {
     $('#table_id').DataTable({
     "bSort": false,
-    "bAutoWidth": false,
+    "autoWidth": false,
      aoColumns : [
+      { "sWidth": "10px"},
       { "sWidth": "45px"},
-      { "sWidth": "85px"},
-      { "sWidth": "145px"},
-      { "sWidth": "105px"},
-      { "sWidth": "105px"},
-      { "sWidth": "105px"},
-      { "sWidth": "72px"},
-      { "sWidth": "76px"}
+      { "sWidth": "115px"},
+      { "sWidth": null},
+      { "sWidth": null},
+      { "sWidth": null},
+      { "sWidth": "35px"},
+      { "sWidth": "37px"}
     ]
 });
     $('#table_id_filter input').addClass('form-control search-input wflr'); // <-- add this line
