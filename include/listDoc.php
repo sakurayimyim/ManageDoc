@@ -79,10 +79,11 @@ $(document).ready( function () {
       { "sWidth": "45px"},
       { "sWidth": "85px"},
       { "sWidth": "145px"},
-      { "sWidth": "105px"},
-      { "sWidth": "105px"},
-      { "sWidth": "105px"},
-      { "sWidth": "33px"},
+      { "sWidth": ""},
+      { "sWidth": ""},
+      { "sWidth": ""},
+      { "sWidth": "72px"},
+      { "sWidth": "95px"}
     ]
 });
     $('#table_id_filter input').addClass('form-control search-input wflr'); // <-- add this line
