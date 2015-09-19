@@ -94,157 +94,157 @@
 			<div class="label_left">เลขที่ทะเบียนการค้า :</div>
 			<div class="label_right"><input type="text" name="BizRegisNo" id="BizRegisNo" class="form-control form-w250" ></div>
 		</div>
-		<div class="info_left">
+		<div class="info_left55">
 			<div class="label_left">เลขที่ :</div>
-			<div class="label_right"><input type="text" name="CustomerAddNo" id="CustomerAddNo" class="form-control form-w250" ></div>
+			<div class="label_right250"><input type="text" name="CustomerAddNo" id="CustomerAddNo" class="form-control form-w250" ></div>
 		</div>
-		<div class="info_left">
-			<div class="label_left">ตรอก / ซอย :</div>
-			<div class="label_right"><input type="text" name="CustomerLane" id="CustomerLane" class="form-control form-w250" ></div>
+		<div class="info_left45">
+			<div class="label_left150">ตรอก / ซอย :</div>
+			<div class="label_right250"><input type="text" name="CustomerLane" id="CustomerLane" class="form-control form-w250" ></div>
 		</div>
-		<div class="info_left">
+		<div class="info_left55">
 			<div class="label_left">ถนน :</div>
-			<div class="label_right"><input type="text" name="CustomerStreet" id="CustomerStreet" class="form-control form-w250" ></div>
+			<div class="label_right250"><input type="text" name="CustomerStreet" id="CustomerStreet" class="form-control form-w250" ></div>
 		</div>
-		<div class="info_left">
-			<div class="label_left">คลอง / แม่น้ำ :</div>
-			<div class="label_right"><input type="text" name="CustomerRiver" id="CustomerRiver" class="form-control form-w250" ></div>
+		<div class="info_left45">
+			<div class="label_left150">คลอง / แม่น้ำ :</div>
+			<div class="label_right250"><input type="text" name="CustomerRiver" id="CustomerRiver" class="form-control form-w250" ></div>
 		</div>
-		<div class="info_left">
+		<div class="info_left55">
 			<div class="label_left">หมู่ที่ :</div>
-			<div class="label_right"><input type="text" name="CustomerMoo" id="CustomerMoo" class="form-control form-w250" ></div>
+			<div class="label_right250"><input type="text" name="CustomerMoo" id="CustomerMoo" class="form-control form-w250" ></div>
 		</div>
-		<div class="info_left">
-			<div class="label_left">ตำบล :</div>
-			<div class="label_right"><input type="text" name="CustomerSubDistrict" id="CustomerSubDistrict" class="form-control form-w250" ></div>
+		<div class="info_left45">
+			<div class="label_left150">ตำบล :</div>
+			<div class="label_right250"><input type="text" name="CustomerSubDistrict" id="CustomerSubDistrict" class="form-control form-w250" ></div>
 		</div>
-		<div class="info_left">
+		<div class="info_left55">
 			<div class="label_left">อำเภอ :</div>
-			<div class="label_right"><input type="text" name="CustomerDistrictID" id="CustomerDistrictID" class="form-control form-w250" ></div>
+			<div class="label_right250"><input type="text" name="CustomerDistrictID" id="CustomerDistrictID" class="form-control form-w250" ></div>
 		</div>
-		<div class="info_left">
-			<div class="label_left">จังหวัด :</div>
-			<div class="label_right"><input type="text" name="CustomerProvinceID" id="CustomerProvinceID" class="form-control form-w250" ></div>
+		<div class="info_left45">
+			<div class="label_left150">จังหวัด :</div>
+			<div class="label_right250"><input type="text" name="CustomerProvinceID" id="CustomerProvinceID" class="form-control form-w250" ></div>
 		</div>
 		<div class="info_left">
 			<div class="label_left">ชื่อผู้ติดต่อ (1) :</div>
-			<div class="label_right"><input type="text" name="Contact1" id="Contact1" class="form-control form-w250" ></div>
+			<div class="label_right"><input type="text" name="Contact1" id="Contact1" class="form-control" ></div>
 		</div>
-		<div class="info_left">
+		<div class="info_left55">
 			<div class="label_left">เบอร์โทรศัพท์ :</div>
-			<div class="label_right"><input type="text" name="Contact1Phone" id="Contact1Phone" class="form-control form-w250" ></div>
+			<div class="label_right250"><input type="text" name="Contact1Phone" id="Contact1Phone" class="form-control form-w250" ></div>
 		</div>
-		<div class="info_left">
-			<div class="label_left">แฟกซ์ :</div>
-			<div class="label_right"><input type="text" name="Contact1Fax" id="Contact1Fax" class="form-control form-w250" ></div>
+		<div class="info_left45">
+			<div class="label_left150">แฟกซ์ :</div>
+			<div class="label_right250"><input type="text" name="Contact1Fax" id="Contact1Fax" class="form-control form-w250" ></div>
 		</div>
-		<div class="info_left">
+		<div class="info_left55">
 			<div class="label_left">อีเมล์ :</div>
-			<div class="label_right"><input type="text" name="Contact1Email" id="Contact1Email" class="form-control form-w250" ></div>
+			<div class="label_right250"><input type="text" name="Contact1Email" id="Contact1Email" class="form-control form-w250" ></div>
 		</div>
-		<div class="info_left">
-			<div class="label_left">เว็บไซต์ :</div>
-			<div class="label_right"><input type="text" name="Contact1Web" id="Contact1Web" class="form-control form-w250" ></div>
+		<div class="info_left45">
+			<div class="label_left150">เว็บไซต์ :</div>
+			<div class="label_right250"><input type="text" name="Contact1Web" id="Contact1Web" class="form-control form-w250" ></div>
 		</div>
 		<div class="info_left">
 			<div class="label_left">ชื่อผู้ติดต่อ (2) :</div>
-			<div class="label_right"><input type="text" name="Contact2" id="Contact2" class="form-control form-w250" ></div>
+			<div class="label_right"><input type="text" name="Contact2" id="Contact2" class="form-control" ></div>
 		</div>
-		<div class="info_left">
+		<div class="info_left55">
 			<div class="label_left">เบอร์โทรศัพท์ :</div>
-			<div class="label_right"><input type="text" name="Contact2Phone" id="Contact2Phone" class="form-control form-w250" ></div>
+			<div class="label_right250"><input type="text" name="Contact2Phone" id="Contact2Phone" class="form-control form-w250" ></div>
 		</div>
-		<div class="info_left">
-			<div class="label_left">แฟกซ์ :</div>
-			<div class="label_right"><input type="text" name="Contact2Fax" id="Contact2Fax" class="form-control form-w250" ></div>
+		<div class="info_left45">
+			<div class="label_left150">แฟกซ์ :</div>
+			<div class="label_right250"><input type="text" name="Contact2Fax" id="Contact2Fax" class="form-control form-w250" ></div>
 		</div>
-		<div class="info_left">
+		<div class="info_left55">
 			<div class="label_left">อีเมล์ :</div>
-			<div class="label_right"><input type="text" name="Contact2Email" id="Contact2Email" class="form-control form-w250" ></div>
+			<div class="label_right250"><input type="text" name="Contact2Email" id="Contact2Email" class="form-control form-w250" ></div>
 		</div>
-		<div class="info_left">
-			<div class="label_left">เว็บไซต์ :</div>
-			<div class="label_right"><input type="text" name="Contact2Web" id="Contact2Web" class="form-control form-w250" ></div>
+		<div class="info_left45">
+			<div class="label_left150">เว็บไซต์ :</div>
+			<div class="label_right250"><input type="text" name="Contact2Web" id="Contact2Web" class="form-control form-w250" ></div>
 		</div>
 		<div class="info_left">
 			<div class="label_left">ชื่อผู้ถือกรรมสิทธิ์เครื่องจักร :</div>
 			<div class="label_right"><input type="text" name="MachineOwner" id="MachineOwner" class="form-control" ></div>
 		</div>
-		<div class="info_left">
+		<div class="info_left55">
 			<div class="label_left">เลขที่ :</div>
-			<div class="label_right"><input type="text" name="MacOwnerAddNo" id="MacOwnerAddNo" class="form-control form-w250" ></div>
+			<div class="label_right250"><input type="text" name="MacOwnerAddNo" id="MacOwnerAddNo" class="form-control form-w250" ></div>
 		</div>
-		<div class="info_left">
-			<div class="label_left">ตรอก / ซอย :</div>
-			<div class="label_right"><input type="text" name="MacOwnerLane" id="MacOwnerLane" class="form-control form-w250" ></div>
+		<div class="info_left45">
+			<div class="label_left150">ตรอก / ซอย :</div>
+			<div class="label_right250"><input type="text" name="MacOwnerLane" id="MacOwnerLane" class="form-control form-w250" ></div>
 		</div>
-		<div class="info_left">
+		<div class="info_left55">
 			<div class="label_left">ถนน :</div>
-			<div class="label_right"><input type="text" name="MacOwnerStreet" id="MacOwnerStreet" class="form-control form-w250" ></div>
+			<div class="label_right250"><input type="text" name="MacOwnerStreet" id="MacOwnerStreet" class="form-control form-w250" ></div>
 		</div>
-		<div class="info_left">
-			<div class="label_left">คลอง / แม่น้ำ :</div>
-			<div class="label_right"><input type="text" name="MacOwnerRiver" id="MacOwnerRiver" class="form-control form-w250" ></div>
+		<div class="info_left45">
+			<div class="label_left150">คลอง / แม่น้ำ :</div>
+			<div class="label_right250"><input type="text" name="MacOwnerRiver" id="MacOwnerRiver" class="form-control form-w250" ></div>
 		</div>
-		<div class="info_left">
+		<div class="info_left55">
 			<div class="label_left">หมู่ที่ :</div>
-			<div class="label_right"><input type="text" name="MacOwnerMoo" id="MacOwnerMoo" class="form-control form-w250" ></div>
+			<div class="label_right250"><input type="text" name="MacOwnerMoo" id="MacOwnerMoo" class="form-control form-w250" ></div>
 		</div>
-		<div class="info_left">
-			<div class="label_left">ตำบล :</div>
-			<div class="label_right"><input type="text" name="MacOwnerSubDistrict" id="MacOwnerSubDistrict" class="form-control form-w250" ></div>
+		<div class="info_left45">
+			<div class="label_left150">ตำบล :</div>
+			<div class="label_right250"><input type="text" name="MacOwnerSubDistrict" id="MacOwnerSubDistrict" class="form-control form-w250" ></div>
 		</div>
-		<div class="info_left">
+		<div class="info_left55">
 			<div class="label_left">อำเภอ :</div>
-			<div class="label_right"><input type="text" name="MacOwnerDistrictID" id="MacOwnerProvinceID" class="form-control form-w250" ></div>
+			<div class="label_right250"><input type="text" name="MacOwnerDistrictID" id="MacOwnerProvinceID" class="form-control form-w250" ></div>
 		</div>
-		<div class="info_left">
-			<div class="label_left">จังหวัด :</div>
-			<div class="label_right"><input type="text" name="MacOwnerProvinceID" id="MacOwnerProvinceID" class="form-control form-w250" ></div>
+		<div class="info_left45">
+			<div class="label_left150">จังหวัด :</div>
+			<div class="label_right250"><input type="text" name="MacOwnerProvinceID" id="MacOwnerProvinceID" class="form-control form-w250" ></div>
 		</div>
 		<div class="info_left">
 			<div class="label_left">ชื่อสถานที่ตั้งกรรมสิทธิ์เครื่องจักร :</div>
 			<div class="label_right"><input type="text" name="MachineLocationName" id="MachineLocationName" class="form-control" ></div>
 		</div>
-		<div class="info_left">
+		<div class="info_left55">
 			<div class="label_left">พิกัดละติจูด :</div>
-			<div class="label_right"><input type="text" name="MacLocLatitute" id="MacLocLatitute" class="form-control form-w250" ></div>
+			<div class="label_right250"><input type="text" name="MacLocLatitute" id="MacLocLatitute" class="form-control form-w250" ></div>
 		</div>
-		<div class="info_left">
-			<div class="label_left">พิกัดลองจิจูด :</div>
-			<div class="label_right"><input type="text" name="MacLocLongitute" id="MacLocLongitute" class="form-control form-w250" ></div>
+		<div class="info_left45">
+			<div class="label_left150">พิกัดลองจิจูด :</div>
+			<div class="label_right250"><input type="text" name="MacLocLongitute" id="MacLocLongitute" class="form-control form-w250" ></div>
 		</div>
-		<div class="info_left">
+		<div class="info_left55">
 			<div class="label_left">เลขที่ :</div>
-			<div class="label_right"><input type="text" name="MacLocAddrNo" id="MacLocAddrNo" class="form-control form-w250" ></div>
+			<div class="label_right250"><input type="text" name="MacLocAddrNo" id="MacLocAddrNo" class="form-control form-w250" ></div>
 		</div>
-		<div class="info_left">
-			<div class="label_left">ตรอก / ซอย :</div>
-			<div class="label_right"><input type="text" name="MacLocLane" id="MacLocLane" class="form-control form-w250" ></div>
+		<div class="info_left45">
+			<div class="label_left150">ตรอก / ซอย :</div>
+			<div class="label_right250"><input type="text" name="MacLocLane" id="MacLocLane" class="form-control form-w250" ></div>
 		</div>
-		<div class="info_left">
+		<div class="info_left55">
 			<div class="label_left">ถนน :</div>
-			<div class="label_right"><input type="text" name="MacLocStreet" id="MacLocStreet" class="form-control form-w250" ></div>
+			<div class="label_right250"><input type="text" name="MacLocStreet" id="MacLocStreet" class="form-control form-w250" ></div>
 		</div>
-		<div class="info_left">
-			<div class="label_left">คลอง / แม่น้ำ :</div>
-			<div class="label_right"><input type="text" name="MacLocRiver" id="MacLocRiver" class="form-control form-w250" ></div>
+		<div class="info_left45">
+			<div class="label_left150">คลอง / แม่น้ำ :</div>
+			<div class="label_right250"><input type="text" name="MacLocRiver" id="MacLocRiver" class="form-control form-w250" ></div>
 		</div>
-		<div class="info_left">
+		<div class="info_left55">
 			<div class="label_left">หมู่ที่ :</div>
-			<div class="label_right"><input type="text" name="MacLocMoo" id="MacLocMoo" class="form-control form-w250" ></div>
+			<div class="label_right250"><input type="text" name="MacLocMoo" id="MacLocMoo" class="form-control form-w250" ></div>
 		</div>
-		<div class="info_left">
-			<div class="label_left">ตำบล :</div>
-			<div class="label_right"><input type="text" name="MacLocSubDistrict" id="MacLocSubDistrict" class="form-control form-w250" ></div>
+		<div class="info_left45">
+			<div class="label_left150">ตำบล :</div>
+			<div class="label_right250"><input type="text" name="MacLocSubDistrict" id="MacLocSubDistrict" class="form-control form-w250" ></div>
 		</div>
-		<div class="info_left">
+		<div class="info_left55">
 			<div class="label_left">อำเภอ :</div>
-			<div class="label_right"><input type="text" name="MacLocDistrictID" id="MacLocDistrictID" class="form-control form-w250" ></div>
+			<div class="label_right250"><input type="text" name="MacLocDistrictID" id="MacLocDistrictID" class="form-control form-w250" ></div>
 		</div>
-		<div class="info_left">
-			<div class="label_left">จังหวัด :</div>
-			<div class="label_right"><input type="text" name="MacLocProvinceID" id="MacLocProvinceID" class="form-control form-w250" ></div>
+		<div class="info_left45">
+			<div class="label_left150">จังหวัด :</div>
+			<div class="label_right250"><input type="text" name="MacLocProvinceID" id="MacLocProvinceID" class="form-control form-w250" ></div>
 		</div>
 		<div class="info_left">
 			<div class="label_left">ใบอนุญาตประกอบกิจการเลขที่ :</div>
@@ -270,8 +270,8 @@
 		<div class="info_left">
 			<div class="label_left"><font color="red">*</font> วดป. รับงานและออกรหัสงานบริษัท :</div>
 			<div class="label_right">
-				<div class="input-group date">
-  					<input type="text" class="form-control form-w250" name="RecieveWorkDate" id="RecieveWorkDate">
+				<div class="input-group date form-w250">
+  					<input type="text" class="form-control" name="RecieveWorkDate" id="RecieveWorkDate">
   					<span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
 				</div>
 			</div>
@@ -279,8 +279,8 @@
 		<div class="info_left">
 			<div class="label_left">วดป. ครบกำหนดส่งงานสถาบัน / ลูกค้า :</div>
 			<div class="label_right">
-				<div class="input-group date">
-  					<input type="text" class="form-control form-w250" name="WorkDueDate" id="WorkDueDate">
+				<div class="input-group date form-w250">
+  					<input type="text" class="form-control" name="WorkDueDate" id="WorkDueDate">
   					<span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
 				</div>
 			</div>
@@ -288,8 +288,8 @@
 		<div class="info_left">
 			<div class="label_left">วดป. ออกสำรวจเครื่องจักร / ทำแผนผังที่ตั้งเครื่องจักร :</div>
 			<div class="label_right">
-				<div class="input-group date">
-  					<input type="text" class="form-control form-w250" name="InspectDate" id="InspectDate">
+				<div class="input-group date form-w250">
+  					<input type="text" class="form-control" name="InspectDate" id="InspectDate">
   					<span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
 				</div>
 			</div>
@@ -297,8 +297,8 @@
 		<div class="info_left">
 			<div class="label_left">วดป. วิศวกรบริษัทฯ ตรวจแบบ :</div>
 			<div class="label_right">
-				<div class="input-group date">
-  					<input type="text" class="form-control form-w250" name="EnginInspectDate" id="EnginInspectDate">
+				<div class="input-group date form-w250">
+  					<input type="text" class="form-control" name="EnginInspectDate" id="EnginInspectDate">
   					<span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
 				</div>
 			</div>
@@ -306,8 +306,8 @@
 		<div class="info_left">
 			<div class="label_left">วดป. ที่ยื่นเรื่องกับ สนก. :</div>
 			<div class="label_right">
-				<div class="input-group date">
-  					<input type="text" class="form-control form-w250" name="OfferDate" id="OfferDate">
+				<div class="input-group date form-w250">
+  					<input type="text" class="form-control" name="OfferDate" id="OfferDate">
   					<span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
 				</div>
 			</div>
@@ -315,8 +315,8 @@
 		<div class="info_left">
 			<div class="label_left">วดป. จนท. สนก.นัดตรวจโรงงาน :</div>
 			<div class="label_right">
-				<div class="input-group date">
-  					<input type="text" class="form-control form-w250" name="EnterInspectDate" id="EnterInspectDate">
+				<div class="input-group date form-w250">
+  					<input type="text" class="form-control" name="EnterInspectDate" id="EnterInspectDate">
   					<span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
 				</div>
 			</div>
@@ -324,8 +324,8 @@
 		<div class="info_left">
 			<div class="label_left">วดป. ติดแผ่นป้ายทะเบียนเครื่องจักร :</div>
 			<div class="label_right">
-				<div class="input-group date">
-  					<input type="text" class="form-control form-w250" name="PlateNoDate" id="PlateNoDate">
+				<div class="input-group date form-w250">
+  					<input type="text" class="form-control" name="PlateNoDate" id="PlateNoDate">
   					<span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
 				</div>
 			</div>
@@ -377,14 +377,14 @@
 		</div>
 		<div class="info_left" id="StatusPresentMore">
 			<div class="label_left">OtherStatusPresent</div>
-			<div class="label_right"><input type="text" name="OtherStatusPresent" id="OtherStatusPresent" class="form-control form-w250" ></div>
+			<div class="label_right"><input type="text" name="OtherStatusPresent" id="OtherStatusPresent" class="form-control" ></div>
 		</div>
 		<div class="clean"></div>
 		<div class="info_left">
 			<div class="label_left">วดป. สถานะปัจจุบัน :</div>
 			<div class="label_right">
-				<div class="input-group date">
-  					<input type="text" class="form-control form-w250" name="StatusPresentDate" id="StatusPresentDate">
+				<div class="input-group date form-w250">
+  					<input type="text" class="form-control" name="StatusPresentDate" id="StatusPresentDate">
   					<span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
 				</div>
 			</div>
@@ -406,7 +406,7 @@
 		</div>
 		<div class="info_left">
 			<div class="label_left">OtherProblem</div>
-			<div class="label_right"><input type="text" name="OtherProblem" id="OtherProblem" class="form-control form-w250" ></div>
+			<div class="label_right"><input type="text" name="OtherProblem" id="OtherProblem" class="form-control" ></div>
 		</div>
 		<div class="info_left">
 			<div class="label_left">แนวทางการแก้ไข :</div>
@@ -444,8 +444,8 @@
 		<div class="info_left">
 			<div class="label_left">วดป. ขอเบิกค่าธรรมเนียมราชการ :</div>
 			<div class="label_right">
-				<div class="input-group date">
-  					<input type="text" class="form-control form-w250" name="TakeFeeDate" id="TakeFeeDate">
+				<div class="input-group date form-w250">
+  					<input type="text" class="form-control" name="TakeFeeDate" id="TakeFeeDate">
   					<span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
 				</div>
 			</div>
@@ -457,8 +457,8 @@
 		<div class="info_left clean">
 			<div class="label_left">วดป. ที่ออกใบเสร็จค่าธรรมเนียมราชการ :</div>
 			<div class="label_right">
-				<div class="input-group date">
-  					<input type="text" class="form-control form-w250" name="OpenRecieptDate" id="OpenRecieptDate">
+				<div class="input-group date form-w250">
+  					<input type="text" class="form-control" name="OpenRecieptDate" id="OpenRecieptDate">
   					<span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
 				</div>
 			</div>
@@ -470,8 +470,8 @@
 		<div class="info_left">
 			<div class="label_left">วดป. บนเล่มทะเบียนเครื่องจักร:</div>
 			<div class="label_right">
-				<div class="input-group date">
-  					<input type="text" class="form-control form-w250" name="MacRegisBookDate" id="MacRegisBookDate">
+				<div class="input-group date form-w250">
+  					<input type="text" class="form-control" name="MacRegisBookDate" id="MacRegisBookDate">
   					<span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
 				</div>
 			</div>
@@ -487,8 +487,8 @@
 		<div class="info_left">
 			<div class="label_left">วดป. ที่ส่งเล่มทะเบียน :</div>
 			<div class="label_right">
-				<div class="input-group date">
-  					<input type="text" class="form-control form-w250" name="SendRegisBookDate" id="SendRegisBookDate">
+				<div class="input-group date form-w250">
+  					<input type="text" class="form-control" name="SendRegisBookDate" id="SendRegisBookDate">
   					<span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
 				</div>
 			</div>
@@ -497,8 +497,8 @@
 		<div class="info_left">
 			<div class="label_left">วดป. ที่งานแล้วเสร็จ :</div>
 			<div class="label_right">
-				<div class="input-group date">
-  					<input type="text" class="form-control form-w250" name="CompleteWorkDate" id="CompleteWorkDate">
+				<div class="input-group date form-w250">
+  					<input type="text" class="form-control" name="CompleteWorkDate" id="CompleteWorkDate">
   					<span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
 				</div>
 			</div>
@@ -506,8 +506,8 @@
 		<div class="info_left">
 			<div class="label_left">วดป. ที่ยกเลิกงาน :</div>
 			<div class="label_right">
-				<div class="input-group date">
-  					<input type="text" class="form-control form-w250" name="CancelWorkDate" id="CancelWorkDate">
+				<div class="input-group date form-w250">
+  					<input type="text" class="form-control" name="CancelWorkDate" id="CancelWorkDate">
   					<span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
 				</div>
 			</div>

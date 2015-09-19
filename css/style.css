@@ -765,7 +765,7 @@ ul.left-menu li.active{
 }
 
 .label_left{
-	width: 250px;
+	width: 200px;
 	margin-top: 20px;
 	float: left;
 	text-align: right;
@@ -817,6 +817,27 @@ ul.left-menu li.active{
 }
 #Solution{
 	display: none
+}
+.info_left55{
+	float: left;
+	width: 55%;
+	min-width: 300px;
+}
+.label_right250{
+	width: 250px;
+	margin: 15px 0px 0px 20px;
+	float: left;
+}
+.label_left150{
+	width: 100px;
+	margin-top: 20px;
+	float: left;
+	text-align: right;
+}
+.info_left45{
+	float: left;
+	width: 45%;
+	min-width: 300px;
 }
 
 /************** New Document By Sakura **********************************/
