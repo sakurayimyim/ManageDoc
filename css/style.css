@@ -597,10 +597,14 @@ ul.left-menu li.active{
 	background: url(../images/leftmenu/logoutw.png) 20px 12px no-repeat;
 }
 
-
 .left-menu-head:hover{
 	background-color:#3987c5;
 	color: #ffffff;
+}
+ .menu-left-newMem-active{
+  color: #ffffff;
+  background: #3987c5  url(../images/leftmenu/add-userw.png) 20px 12px no-repeat;
+
 }
 .system-herder{
 	width:100%;

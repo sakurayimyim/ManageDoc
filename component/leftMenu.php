@@ -1,10 +1,3 @@
-<style type="text/css">
-  .menu-left-newMem-active{
-  color: #ffffff;
-  background: #0866C6  url(../images/leftmenu/add-userw.png) 20px 12px no-repeat;
-
-}
-</style>
 <div class="menu-left">
   <div class="menu-profile"> 
   <div class="menu-profile-img">
