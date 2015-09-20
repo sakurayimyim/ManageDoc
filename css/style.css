@@ -963,6 +963,9 @@ table.dataTable thead th, table.dataTable thead td{
     border-left: none;
     border-bottom: none;
 }
+thead{
+	color: #3987c5;
+}
 
 
 /*********************** button ************************************/
