@@ -1,6 +1,7 @@
 <?php session_start(); 
 	include('../config/config.php');
-	include('lib/lib.php');
+	include('../lib/lib.php');
+echo ConvertDate($_POST['WorkDueDate'],"Y-m-d");
 echo $sqlInsert = "INSERT INTO document VALUES('', 
 	'".$_POST['ListNo']."', 
 	'".$_POST['WorkCode']."', 
@@ -52,7 +53,7 @@ echo $sqlInsert = "INSERT INTO document VALUES('',
 	'".$_POST['EnterpriseLicienceNo']."', 
 	'".$_POST['IndustryType']."', 
 	'".$_POST['MachineAmnt']."', 
-	'".$_POST['RecieveWorkDate']."', 
+	'".ConvertDate($_POST['RecieveWorkDate'])."', 
 	'".ConvertDate($_POST['WorkDueDate'],"Y-m-d")."', 
 	'".ConvertDate($_POST['InspectDate'],"Y-m-d")."', 
 	'".ConvertDate($_POST['EnginInspectDate'],"Y-m-d")."', 
@@ -71,9 +72,9 @@ echo $sqlInsert = "INSERT INTO document VALUES('',
 	'".$_POST['EstimateFee']."', 
 	'".ConvertDate($_POST['TakeFeeDate'],"Y-m-d")."', 
 	'".$_POST['RevenueFee']."', 
-	'".ConvertDate($_POST['OpenRecieptDate'],"Y-m-d")."', 
-	'".ConvertDate($_POST['MacRegisBookDate'],"Y-m-d")."',
+	'".ConvertDate($_POST['OpenRecieptDate'],"Y-m-d")."',
 	'".$_POST['RecieptNo']."',  
+	'".ConvertDate($_POST['MacRegisBookDate'],"Y-m-d")."',
 	'".$_POST['MacRegisBookNo']."', 
 	'".$_POST['MacPlateNo']."', 
 	'".ConvertDate($_POST['SendRegisBookDate'],"Y-m-d")."', 
@@ -86,11 +87,25 @@ echo $sqlInsert = "INSERT INTO document VALUES('',
 	NOW(), 
 	'".$_SESSION['MemberID']."')";
 $sqlQuery = mysql_db_query($dbname, $sqlInsert);
+$DocID = mysql_insert_id();
+if($sqlQuery != "" && $_POST['StatusPresentID'] == 19 && $_POST['ProblemID'] > 0){
+	$sqlDocProbLog = "INSERT INTO documentproblemlog VALUES('',
+	'".$_POST['MacPlateNo']."',
+	'".$DocID."',
+	'".$_POST['ProblemID']."',
+	'".$_POST['SolutionID']."',
+	NOW(),
+	NOW(),
+	'".$_SESSION['MemberID']."', 
+	NOW(),
+	'".$_SESSION['MemberID']."')";
+}
+
 if($sqlQuery){
-		$DocID = mysql_insert_id();
+		
 		$json = array(
 			'IsResult'=>true,
-			'MemberID'=>$DocID,
+			'DocID'=>$DocID,
 			);
 	}else{
 		$json = array(

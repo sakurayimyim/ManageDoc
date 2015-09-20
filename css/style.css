@@ -839,7 +839,18 @@ ul.left-menu li.active{
 	width: 45%;
 	min-width: 300px;
 }
-
+#StatusPresentMore{
+	display: none;
+}
+#OtherProblemMore{
+	display: none;
+}
+#Solution{
+	display: none;
+}
+#OtherSolutionMore{
+	display: none;
+}
 /************** New Document By Sakura **********************************/
 
 /********************Panel Tab Modified*************************/

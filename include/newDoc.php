@@ -376,18 +376,8 @@
 			</div>
 		</div>
 		<div class="info_left" id="StatusPresentMore">
-			<div class="label_left">OtherStatusPresent</div>
+			<div class="label_left">อื่นๆ</div>
 			<div class="label_right"><input type="text" name="OtherStatusPresent" id="OtherStatusPresent" class="form-control" ></div>
-		</div>
-		<div class="clean"></div>
-		<div class="info_left">
-			<div class="label_left">วดป. สถานะปัจจุบัน :</div>
-			<div class="label_right">
-				<div class="input-group date form-w250">
-  					<input type="text" class="form-control" name="StatusPresentDate" id="StatusPresentDate">
-  					<span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
-				</div>
-			</div>
 		</div>
 		<div class="info_left" id="ProblemDetail">
 			<div class="label_left">รายละเอียดงานติดปัญหา :</div>
@@ -404,11 +394,11 @@
 				</select>
 			</div>
 		</div>
-		<div class="info_left">
-			<div class="label_left">OtherProblem</div>
+		<div class="info_left" id="OtherProblemMore">
+			<div class="label_left">อื่นๆ</div>
 			<div class="label_right"><input type="text" name="OtherProblem" id="OtherProblem" class="form-control" ></div>
 		</div>
-		<div class="info_left">
+		<div class="info_left" id="Solution">
 			<div class="label_left">แนวทางการแก้ไข :</div>
 			<div class="label_right">
 				<select class="form-control" name="SolutionID" id="SolutionID">
@@ -423,11 +413,21 @@
 				</select>
 			</div>
 		</div>
-		<div class="info_left">
-			<div class="label_left">OtherSolution</div>
-			<div class="label_right"><input type="text" name="OtherSolution" id="OtherSolution" class="form-control form-w250" ></div>
+		<div class="info_left" id="OtherSolutionMore">
+			<div class="label_left">อื่นๆ</div>
+			<div class="label_right"><input type="text" name="OtherSolution" id="OtherSolution" class="form-control" ></div>
 		</div>
 	</div>
+	<div class="clean"></div>
+		<div class="info_left">
+			<div class="label_left">วดป. สถานะปัจจุบัน :</div>
+			<div class="label_right">
+				<div class="input-group date form-w250">
+  					<input type="text" class="form-control" name="StatusPresentDate" id="StatusPresentDate">
+  					<span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+				</div>
+			</div>
+		</div>
 	<div class="clean"></div>
 </div>
 </div>
