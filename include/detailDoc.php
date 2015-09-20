@@ -34,7 +34,7 @@ WHERE document.DocID = $DocID";
   	</div>
   	<div class="detail_form detail_w45">
   		<div class="detail_forml detail_l">วดป. รับงานและออกรหัสงานบริษัท :</div>
-  		<div class="detail_formr detail_r"><?=$RecieveWorkDate ?></div>
+  		<div class="detail_formr detail_r"><?=FullDateThai($RecieveWorkDate) ?></div>
   	</div>
   	<div class="detail_form">
   		<div class="detail_forml">เลขที่สัญญาสถาบัน/ลูกค้า :</div>
@@ -42,7 +42,7 @@ WHERE document.DocID = $DocID";
   	</div>
   	<div class="detail_form detail_w45">
   		<div class="detail_forml detail_l">วดป. ครบกำหนดส่งงานสถาบัน/ลูกค้า :</div>
-  		<div class="detail_formr detail_r"><?=$WorkDueDate ?></div>
+  		<div class="detail_formr detail_r"><?=FullDateThai($WorkDueDate) ?></div>
   	</div>
   	<div class="detail_form">
   		<div class="detail_forml">ประเภทนิติกรรม :</div>
@@ -50,7 +50,7 @@ WHERE document.DocID = $DocID";
   	</div>
   	<div class="detail_form detail_w45">
   		<div class="detail_forml detail_l">วดป. ที่ยื่นเรื่องกับ สนก. :</div>
-  		<div class="detail_formr detail_r"><?=$OfferDate ?></div>
+  		<div class="detail_formr detail_r"><?=FullDateThai($OfferDate) ?></div>
   	</div>
   	<div class="detail_form">
   		<div class="detail_forml">ชื่อลูกค้าสถาบัน/ลูกค้า :</div>
@@ -58,7 +58,7 @@ WHERE document.DocID = $DocID";
   	</div>
   	<div class="detail_form detail_w45">
   		<div class="detail_forml detail_l">วดป. จนท. สนก. นัดตรวจโรงงาน :</div>
-  		<div class="detail_formr detail_r"><?=$InspectDate ?></div>
+  		<div class="detail_formr detail_r"><?=FullDateThai($InspectDate) ?></div>
   	</div>
   	<div class="detail_form">
   		<div class="detail_forml">ชื่อสถานที่ตั้งกรรมสิทธิ์เครื่องจักร :</div>
@@ -104,7 +104,7 @@ WHERE document.DocID = $DocID";
     ?>
     <tr>
       <td><?=$ListNo?></td>
-      <td><?=$objLogProb['ProblemLogDate']?></td>
+      <td><?=FullDateThai($objLogProb['ProblemLogDate'])?></td>
       <td><?=$objLogProb['OtherProblem']?></td>
       <td><?=$objLogProb['OtherSolution']?></td>
     </tr> 

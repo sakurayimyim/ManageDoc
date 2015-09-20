@@ -28,9 +28,6 @@ $("#SolutionID").on('change',function(){
 		$("#OtherSolutionMore").css("display","none");
 	}
 });
-
-
-
 $("#StatusPresentID").on("change",function(){
 	var StatusPresentID = $("#StatusPresentID").val();
 	if(StatusPresentID == 19){
