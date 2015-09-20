@@ -1,9 +1,11 @@
-<?php $sql="select * from document
+<?php 
+$DocID = $_GET['id'];
+$sql="select * from document
 JOIN bank ON (document.BankID = bank.BankID) 
 JOIN juristictype ON (document.JuristicTypeID = juristictype.JuristicTypeID)
 JOIN responseemp ON (document.ResponseEmpID = responseemp.ResponseEmpID) 
 JOIN responsehead ON (document.ResponseHeadID = responsehead.ResponseHeadID)   
-WHERE document.DocID=3";
+WHERE document.DocID = $DocID";
   $result=mysql_db_query($dbname,$sql);
   $objResult=mysql_fetch_array($result);
   $BankName=$objResult['BankName'];
@@ -94,12 +96,22 @@ WHERE document.DocID=3";
 			<td width="40%">รายละเอียดงานติดปัญหา</td>
 			<td width="35%">แนวทางแก้ไข</td>
 		</tr>
-		<tr>
-			<td>1</td>
-			<td>15 กันยายน 2558</td>
-			<td>รายละเอียดงานติดปัญหา</td>
-			<td>แนวทางแก้ไข</td>
-		</tr>	
+    <?php 
+      $sqlLogProb = "select * from documentproblemlog where DocID = $DocID";
+      $logProbQuery = mysql_db_query($dbname, $sqlLogProb);
+      while ($objLogProb = mysql_fetch_array($logProbQuery)) {
+        $ListNo = 1;
+    ?>
+    <tr>
+      <td><?=$ListNo?></td>
+      <td><?=$objLogProb['ProblemLogDate']?></td>
+      <td><?=$objLogProb['OtherProblem']?></td>
+      <td><?=$objLogProb['OtherSolution']?></td>
+    </tr> 
+    <?php
+    $ListNo++ ;
+      }
+    ?>
 	</table>
 
 </div>

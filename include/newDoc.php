@@ -545,7 +545,7 @@ $("#SubmitFrmNewDoc").on('click',function(){
             console.log(data);
             if(data.IsResult == true){
               AlertSuccess();
-                //window.location.href = 'index.php?page=listMember&id='+data.MemberID;
+                window.location.href = 'index.php?page=detailDoc&id='+data.DocID;
             }else{
               AlertError();
             }

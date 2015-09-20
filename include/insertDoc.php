@@ -1,8 +1,7 @@
 <?php session_start(); 
 	include('../config/config.php');
 	include('../lib/lib.php');
-echo ConvertDate($_POST['WorkDueDate'],"Y-m-d");
-echo $sqlInsert = "INSERT INTO document VALUES('', 
+$sqlInsert = "INSERT INTO document VALUES('', 
 	'".$_POST['ListNo']."', 
 	'".$_POST['WorkCode']."', 
 	'".$_POST['App']."', 
@@ -53,7 +52,7 @@ echo $sqlInsert = "INSERT INTO document VALUES('',
 	'".$_POST['EnterpriseLicienceNo']."', 
 	'".$_POST['IndustryType']."', 
 	'".$_POST['MachineAmnt']."', 
-	'".ConvertDate($_POST['RecieveWorkDate'])."', 
+	'".ConvertDate($_POST['RecieveWorkDate'],"Y-m-d")."', 
 	'".ConvertDate($_POST['WorkDueDate'],"Y-m-d")."', 
 	'".ConvertDate($_POST['InspectDate'],"Y-m-d")."', 
 	'".ConvertDate($_POST['EnginInspectDate'],"Y-m-d")."', 
@@ -88,17 +87,38 @@ echo $sqlInsert = "INSERT INTO document VALUES('',
 	'".$_SESSION['MemberID']."')";
 $sqlQuery = mysql_db_query($dbname, $sqlInsert);
 $DocID = mysql_insert_id();
-if($sqlQuery != "" && $_POST['StatusPresentID'] == 19 && $_POST['ProblemID'] > 0){
+if($sqlQuery != "" && $_POST['StatusPresentID'] == 19 && $_POST['ProblemID'] > 0 && $_POST['SolutionID'] > 0){
+	$SolutionName = "";
+	$ProblemName = "";
+	if($_POST['ProblemID'] == 40){
+		$ProblemName = $_POST['OtherProblem'];
+	}else{
+		$sqlProb = "SELECT ProblemName from problem Where ProblemID = $_POST['ProblemID']";
+		$probQuery = mysql_db_query($dbname, $sqlProb);
+		$dataProb = mysql_fetch_array($probQuery);
+		$ProblemName = $dataProb['ProblemName'];
+	}
+	if($_POST['SolutionID'] == 6){
+		$SolutionName = $_POST['OtherProblem'];
+	}else{
+		$sqlSolution = "SELECT SolutionName from solution Where SolutionID = $_POST['SolutionID']";
+		$solutionQuery = mysql_db_query($dbname, $sqlSolution);
+		$dataSolution = mysql_fetch_array($solutionQuery);
+		$SolutionName = $dataSolution['SolutionName'];
+	}
 	$sqlDocProbLog = "INSERT INTO documentproblemlog VALUES('',
 	'".$_POST['MacPlateNo']."',
 	'".$DocID."',
 	'".$_POST['ProblemID']."',
+	'".$ProblemName."',
 	'".$_POST['SolutionID']."',
+	'".$SolutionName."',
 	NOW(),
 	NOW(),
 	'".$_SESSION['MemberID']."', 
 	NOW(),
 	'".$_SESSION['MemberID']."')";
+	$ProbLogQuery = mysql_db_query($dbname, $sqlDocProbLog);
 }
 
 if($sqlQuery){
