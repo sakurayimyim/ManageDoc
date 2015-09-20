@@ -3,7 +3,7 @@
     สมาชิกทั้งหมด
   </div>
   <div class="content-body list-minh650">
-      <table id="table_id" class="display ">
+      <table id="table_id" class="display table-bordered">
      <thead>
         <tr>
           <th width="18%">ชื่อ</th>

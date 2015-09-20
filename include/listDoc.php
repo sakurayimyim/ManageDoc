@@ -29,7 +29,7 @@
           <th >ชื่อลูกค้าสถาบัน/ลูกค้า</th>
           <th>สถานะปัจจุบัน</th>
           <th class="txt-center">ปัญหา</th>
-          <th style="border-right:none;"></th>
+          <th class="border_rnone"></th>
         </tr>
     </thead>
     <tbody>
@@ -42,28 +42,33 @@
           <td align="center"><?=$objR['ListNo']?></td>
             <td><?=$objR['WorkCode']?></td>
             <td><?=$objR['ContractNo']?></td>
-            <td><div class="justicName">
             <?php
             $sqlJuristicType = "SELECT JuristicTypeID, JuristicTypeName FROM juristictype WHERE JuristicTypeID = '".$objR['JuristicTypeID']."'";
             $juristicTypeQuery = mysql_db_query($dbname, $sqlJuristicType);
-            $objJur = mysql_fetch_array($juristicTypeQuery);
-              echo $objJur['JuristicTypeName'];
-            ?>
+            $objJur = mysql_fetch_array($juristicTypeQuery); ?>
+            <td title="<?=$objJur['JuristicTypeName'] ?>"><div class="justicName">
+            <?php echo $objJur['JuristicTypeName'];?>
             </div></td>
-            <td><div class="justicName">
+            <td title="<?=$objR['CustomerName']?>"><div class="justicName">
             <?=$objR['CustomerName']?></div></td>
-            <td><div class="justicName">
-              <?php
+            <?php
               $sqlStatus = "SELECT StatusPresentID,StatusPresentName FROM statuspresent where StatusPresentID = '".$objR['StatusPresentID']."'";
               $statusQuery = mysql_db_query($dbname, $sqlStatus);
-              $objStatus =  mysql_fetch_array($statusQuery);
-              echo $objStatus['StatusPresentName'];
-              ?>
+              $objStatus =  mysql_fetch_array($statusQuery); ?>
+            <td title="<?=$objStatus['StatusPresentName']?>"><div class="justicName">
+             <?php echo $objStatus['StatusPresentName'];?>
             </div></td>
-            <td></td>
-            <td style="border-right:none;">
-            <a href=""><img src="images/edit.png" width="24" height="24"></a>
-            <a href=""><img src="images/delete.png" width="24" height="24"></a></td>
+
+            <?php
+              $sqlPb = "SELECT  ProblemID,ProblemName FROM problem where ProblemID = '".$objR['ProblemID']."'";
+              $pbQuery = mysql_db_query($dbname, $sqlPb);
+              $objPb =  mysql_fetch_array($pbQuery); ?>
+            <td align="center"><?php if($objR['StatusPresentID']==19){ ?>
+              <img src="images/pb.png" width="24" height="24" title="<?=$objPb['ProblemName']?>">
+              <? } ?></td>
+            <td class="border_rnone">
+            <a href=""><img src="images/edit.png" width="24" height="24" title="แก้ไข"></a>
+            <a href=""><img src="images/delete.png" width="24" height="24" title="ลบ"></a></td>
         </tr>
         <?php } ?>
     </tbody>
