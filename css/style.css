@@ -910,25 +910,25 @@ ul.left-menu li.active{
 .detail_forml{
 	width: 39%;
 	float: left;
-	min-height: 40px;
+	min-height: 46px;
 	background-color: #f2f2f2;
 	text-align: left;
-	padding:10px 10px 0px 10px;
+	padding:10px 0px 0px 10px;
 	border-right:1px solid #e4e4e4;
 }
 
 .detail_l{
-	width: 49%;
+	width: 55%;
 }
 .detail_formr{
 	width: 61%;
-	min-height: 40px;
+	min-height: 46px;
 	float: left;
 	padding:10px 10px 0px 10px;
 	border-right:1px solid #e4e4e4;
 }
 .detail_r{
-	width: 51%;
+	width: 45%;
 }
 
 
