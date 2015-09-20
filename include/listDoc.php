@@ -29,7 +29,7 @@
           <th >ชื่อลูกค้าสถาบัน/ลูกค้า</th>
           <th>สถานะปัจจุบัน</th>
           <th class="txt-center">ปัญหา</th>
-          <th class="border_rnone"></th>
+          <th style="border-right:none;"></th>
         </tr>
     </thead>
     <tbody>
@@ -66,7 +66,7 @@
             <td align="center"><?php if($objR['StatusPresentID']==19){ ?>
               <img src="images/pb.png" width="24" height="24" title="<?=$objPb['ProblemName']?>">
               <? } ?></td>
-            <td class="border_rnone">
+            <td style="border-right:none;">
             <a href=""><img src="images/edit.png" width="24" height="24" title="แก้ไข"></a>
             <a href=""><img src="images/delete.png" width="24" height="24" title="ลบ"></a></td>
         </tr>

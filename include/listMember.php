@@ -3,17 +3,15 @@
     สมาชิกทั้งหมด
   </div>
   <div class="content-body list-minh650">
-      <table id="table_id" class="display table-bordered">
+      <table id="MemberTable" class="display table-bordered">
      <thead>
         <tr>
-          <th width="18%">ชื่อ</th>
-          <th width="18%">นามสกุล</th>
-          <th width="14%">ประเภทผู้ใช้</th>
-          <th width="15%">เบอร์โทรศัพท์</th>
-          <th width="15%">อีเมล์</th>
-          <th width="10%">สถานะ</th>
-          <th></th>
-          <th></th>
+          <th>ชื่อ - นามสกุล</th>
+          <th>ประเภทผู้ใช้</th>
+          <th>เบอร์โทรศัพท์</th>
+          <th>อีเมล์</th>
+          <th>สถานะ</th>
+          <th style="border-right:none;"></th>
         </tr>
     </thead>
     <tbody>
@@ -23,8 +21,7 @@
       while ($objResult =  mysql_fetch_array($sqlQuery)) {
         ?>
         <tr>
-            <td><?=$objResult['MemberFirstName']?></td>
-            <td><?=$objResult['MemberLastName']?></td>
+            <td><?=$objResult['MemberFirstName']?>&nbsp;<?=$objResult['MemberLastName']?></td>
             <td>
             <?php 
             if($objResult['MemberType'] == 1){
@@ -47,8 +44,12 @@
             }
             ?>
             </td>
-            <td><a href="?page=editMember&id=<?=$objResult['MemberID']?>">Edit</a></td>
-            <td><a class="cur-pointer" onClick="MemberDel(<?=$objResult['MemberID']?>)" >Delete</a></td>
+            <td style="border-right:none;">
+              <a href="?page=editMember&id=<?=$objResult['MemberID']?>">
+              <img src="images/edit.png" width="24" height="24" title="แก้ไข"></a>
+              <a class="cur-pointer" onClick="MemberDel(<?=$objResult['MemberID']?>)">
+              <img src="images/delete.png" width="24" height="24" title="ลบ"></a>
+            </td>
         </tr>
         <?php
       }
@@ -58,3 +59,21 @@
   </div>
 </div>
 <script src="js/member.js"></script>
+<script type="text/javascript">
+$(document).ready( function () {
+    $('#MemberTable').DataTable({
+    "bSort": false,
+    "autoWidth": false,
+     aoColumns : [
+      { "sWidth": "230px"},
+      { "sWidth": "120px"},
+      { "sWidth": "150px"},
+      { "sWidth": "180px"},
+      { "sWidth": null},
+      { "sWidth": "37px"}
+    ]
+});
+    $('#table_id_filter input').addClass('form-control search-input wflr'); // <-- add this line
+    $('#table_id_filter label').css('line-height', '30px');
+});
+</script>

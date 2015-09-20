@@ -964,16 +964,13 @@ table.dataTable thead th, table.dataTable thead td{
     border-bottom: none;
 }
 
-.border_rnone{
- border-right:none;
-};
 
 /*********************** button ************************************/
 .btn-success{
 	border-radius: 2px !important;
 	background-color: #27ae60 !important; 
 	border-color: #27ae60  !important;
-	width: 100px; 
+	width: 100px !important ;
 }
 .btn-success:hover{
 
