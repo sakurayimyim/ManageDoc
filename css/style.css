@@ -477,10 +477,9 @@ label.error{
 .menu-header{
 	width:100%;
 	height:57px;
-	background-color: #fafafa;
+	background:url("../images/h1.png") center 50%;
 	position: fixed;
 	z-index: 1000;
-	border-bottom: 2px solid #0866C6;
 }
 .header-bar-name{
 	width:auto;
@@ -507,7 +506,7 @@ label.error{
 	width:220px;
 	height:100%;
 	min-height:720px;
-	background-color:#192128;
+	background-color:#263238;
 	float:left;
 	border-right:1px #D7D7D7 solid;
 	position: fixed;
@@ -551,48 +550,48 @@ ul.left-menu li.active{
 .left-menu-head{
 	width:219px;
 	min-height:40px;
-	border-bottom:1px #192128 solid;
+	border-bottom:1px #2f3c43 solid;
 	padding: 10px 0 0 45px;	
 	font-size:14px;
-	color:#a8acb1;	
+	color:#b0bec5;	
 	
 }
 
 .left-img-1{
-	background: #232A2F url(../images/leftmenu/add-userg.png) 20px 12px no-repeat;
+	background: #263238 url(../images/leftmenu/add-userg.png) 20px 12px no-repeat;
 }
 .left-img-1:hover{
 	background:  url(../images/leftmenu/add-userw.png) 20px 12px no-repeat;
 }
 
 .left-img-2{
-	background: #232A2F url(../images/leftmenu/userg.png) 20px 12px no-repeat;
+	background: #263238 url(../images/leftmenu/userg.png) 20px 12px no-repeat;
 }
 .left-img-2:hover{
 	background: url(../images/leftmenu/userw.png) 20px 12px no-repeat;
 }
 .left-img-3{
-	background: #232A2F url(../images/leftmenu/adddocg.png) 20px 12px no-repeat;
+	background: #263238 url(../images/leftmenu/adddocg.png) 20px 12px no-repeat;
 }
 .left-img-3:hover{
 	background: url(../images/leftmenu/adddocw.png) 20px 12px no-repeat;
 }
 
 .left-img-4{
-	background: #232A2F url(../images/leftmenu/file-text2g.png) 20px 12px no-repeat;
+	background: #263238 url(../images/leftmenu/file-text2g.png) 20px 12px no-repeat;
 }
 .left-img-4:hover{
 	background: url(../images/leftmenu/file-text2w.png) 20px 12px no-repeat;
 }
 
 .left-img-5{
-	background: #232A2F url(../images/leftmenu/cogg.png) 20px 12px no-repeat;
+	background: #263238 url(../images/leftmenu/cogg.png) 20px 12px no-repeat;
 }
 .left-img-5:hover{
 	background: url(../images/leftmenu/cogw.png) 20px 12px no-repeat;
 }
 .left-img-6{
-	background: #232A2F url(../images/leftmenu/logoutg.png) 20px 12px no-repeat;
+	background: #263238 url(../images/leftmenu/logoutg.png) 20px 12px no-repeat;
 }
 .left-img-6:hover{
 	background: url(../images/leftmenu/logoutw.png) 20px 12px no-repeat;
@@ -600,7 +599,7 @@ ul.left-menu li.active{
 
 
 .left-menu-head:hover{
-	background-color:#0866C6;
+	background-color:#3987c5;
 	color: #ffffff;
 }
 .system-herder{
@@ -622,9 +621,9 @@ ul.left-menu li.active{
 	width: 50%;
 	height: 35px;
 	float: left;
-	color: #0866C6;
+	color: #ffffff;
 	font-size: 26px;
-	padding: 7px 0 0 10px;
+	padding: 7px 0 0 5px;
 	font-family: ThaiSans Neue ;  
 }
 .menu-profile{
@@ -653,18 +652,19 @@ ul.left-menu li.active{
 .menu-title{
 	height: 45px;
 	font-size: 14px;
-	color: #999999;
+	color: #607d8b;
 	padding: 14px 0 0 20px;
-	background-color: #2D353C;
+	background-color: #2f3c43;
 }
 .content-header{
 	width: 100%;
 	height: 40px;
-	background-color: #0866C6;
-	color:#FFFFFF;
-	font-size: 14px;
+	background-color: #fff;
+	font-family: 'ThaiSans Neue' ;
+	color:#607d8b;
+	font-size: 23px;
 	border-radius: 3px 3px 0 0;
-	padding: 10px;
+	padding: 7px 10px;
 }
 .content-body{
 	padding: 10px;
@@ -803,8 +803,6 @@ ul.left-menu li.active{
 
 .company-logo{
 	float: left;
-	background-color: #fafafa;
-	border-bottom: 2px solid #0866C6;
 	width: 57px;
 	height: 57px;
 	padding: 10px;
@@ -956,4 +954,29 @@ table.dataTable thead th, table.dataTable thead td{
     border-top: none;
     border-left: none;
     border-bottom: none;
+}
+
+/*********************** button ************************************/
+.btn-success{
+	border-radius: 2px !important;
+	background-color: #27ae60 !important; 
+	border-color: #27ae60  !important;
+	width: 100px; 
+}
+.btn-success:hover{
+
+	background-color: #26A65B !important; 
+}
+.btn-default{
+	border-radius: 2px !important;
+	width: 100px;
+}
+
+/********************* table *****************************/
+.dataTables_filter{
+	margin-bottom: 10px !important;
+}
+.chang_page{
+	height: 30px;
+    margin: 0 5px 0 5px;
 }

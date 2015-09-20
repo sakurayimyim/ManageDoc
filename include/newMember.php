@@ -3,11 +3,6 @@
   <div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">	
   <div class="content-header">
     ข้อมูลส่วนตัวของสมาชิก
-  <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne1" aria-expanded="true" aria-controls="collapseOne">
-  <div style="float:right;line-height:16px; margin-right:5px;">
-  	<img src="images/minus-alt.png" title="ปิดแท็บ">
-  </div>
-  </a>
   </div>
   
   <div id="collapseOne1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
@@ -126,10 +121,12 @@
    </div>
 </div>
 </div>
-<div class="clean mt-57"></div>
-<div class="content-list">
-  <div class="content-body">
-	<input type="button" id="SubmitFrmNewMember" class="btn btn-success" value="บันทึก"></div>
+<div class="clean"></div>
+<div class="content-list" style="margin-top:1px;">
+  <div class="content-body" style="margin-left:16.5%;">
+	<input type="button" id="SubmitFrmNewMember" class="btn btn-success" value="บันทึก">
+	<input type="button" id="" class="btn btn-default" value="ยกเลิก">
+  </div>
   </div>
 </form>
 <script src="js/member.js"></script>

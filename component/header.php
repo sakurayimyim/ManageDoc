@@ -1,6 +1,6 @@
   <div class="menu-header">
   <div class="company-logo">
-  	<img src="images/logoIEC.png" width="36" height="36">
+  	<img src="images/comlogo.png" width="36" height="36">
   </div>	
   <div class="company-name">
     บริษัท อินทิเกรเทด เอนเตอร์ไพร์ส คอนซัลแตนท์ จำกัด
