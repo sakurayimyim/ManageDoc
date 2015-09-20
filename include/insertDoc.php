@@ -93,7 +93,7 @@ if($sqlQuery != "" && $_POST['StatusPresentID'] == 19 && $_POST['ProblemID'] > 0
 	if($_POST['ProblemID'] == 40){
 		$ProblemName = $_POST['OtherProblem'];
 	}else{
-		$sqlProb = "SELECT ProblemName from problem Where ProblemID = $_POST['ProblemID']";
+		$sqlProb = "SELECT ProblemName from problem Where ProblemID = '".$_POST['ProblemID']."'";
 		$probQuery = mysql_db_query($dbname, $sqlProb);
 		$dataProb = mysql_fetch_array($probQuery);
 		$ProblemName = $dataProb['ProblemName'];
@@ -101,7 +101,7 @@ if($sqlQuery != "" && $_POST['StatusPresentID'] == 19 && $_POST['ProblemID'] > 0
 	if($_POST['SolutionID'] == 6){
 		$SolutionName = $_POST['OtherProblem'];
 	}else{
-		$sqlSolution = "SELECT SolutionName from solution Where SolutionID = $_POST['SolutionID']";
+		$sqlSolution = "SELECT SolutionName from solution Where SolutionID = '".$_POST['SolutionID']."'";
 		$solutionQuery = mysql_db_query($dbname, $sqlSolution);
 		$dataSolution = mysql_fetch_array($solutionQuery);
 		$SolutionName = $dataSolution['SolutionName'];

@@ -1,6 +1,6 @@
 <?php 
-$DocID = $_GET['id'];
-$sql="select * from document
+echo $DocID = $_GET['id'];
+echo $sql="select * from document
 JOIN bank ON (document.BankID = bank.BankID) 
 JOIN juristictype ON (document.JuristicTypeID = juristictype.JuristicTypeID)
 JOIN responseemp ON (document.ResponseEmpID = responseemp.ResponseEmpID) 
