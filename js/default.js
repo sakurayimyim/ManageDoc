@@ -1,3 +1,16 @@
+$(document).ready( function () {
+
+//--- Modify Table
+$('.dataTables_filter input').addClass('form-control search-input wflr'); // <-- add this line
+    $('.dataTables_filter label').css('line-height', '30px');
+    $('.dataTables_length label').css('width','250px');
+    $('.dataTables_length label select').addClass('form-control');
+    $('.dataTables_length label select').css('display', 'inline-block');
+    $('.dataTables_length label select').css('width', '75px');
+    $('.paginate_button').css('background','#ffffff');
+    $('.paginate_button').css('border-radius','3px');
+});
+
 //---Alert & Loading
 function AlertSuccess(){
   $(".alert-success").fadeIn( "slow", function() {
@@ -42,3 +55,4 @@ $("#ListDoc").on('click',function(){
 $("#ManageProfile").on('click',function(){
   window.location.href = 'index.php?page=manageProfile';
 });
+

@@ -62,7 +62,7 @@
 <script type="text/javascript">
 $(document).ready( function () {
     $('#MemberTable').DataTable({
-    "bSort": false,
+    "bSort": true,
     "autoWidth": false,
      aoColumns : [
       { "sWidth": "230px"},
@@ -73,7 +73,5 @@ $(document).ready( function () {
       { "sWidth": "37px"}
     ]
 });
-    $('#table_id_filter input').addClass('form-control search-input wflr'); // <-- add this line
-    $('#table_id_filter label').css('line-height', '30px');
 });
 </script>

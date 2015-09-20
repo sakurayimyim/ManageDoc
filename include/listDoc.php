@@ -19,7 +19,7 @@
     เอกสารทั้งหมด
   </div>
   <div class="content-body">
-      <table id="table_id" class="display table-bordered">
+      <table id="DocTable" class="display table-bordered">
      <thead>
         <tr>
           <th>#</th>
@@ -77,8 +77,8 @@
 </div>
 <script type="text/javascript">
 $(document).ready( function () {
-    $('#table_id').DataTable({
-    "bSort": false,
+    $('#DocTable').DataTable({
+    "bSort": true,
     "autoWidth": false,
      aoColumns : [
       { "sWidth": "10px"},
@@ -90,8 +90,6 @@ $(document).ready( function () {
       { "sWidth": "35px"},
       { "sWidth": "37px"}
     ]
-});
-    $('#table_id_filter input').addClass('form-control search-input wflr'); // <-- add this line
-    $('#table_id_filter label').css('line-height', '30px');
+});  
 });
 </script>
