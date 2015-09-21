@@ -51,6 +51,7 @@
           case 'listDoc' : include('include/listDoc.php'); break;
           case 'newDoc' : include('include/newDoc.php'); break;
           case 'newMember' : include('include/newMember.php'); break;
+          case 'editDoc' : include('include/editDoc.php'); break;
           case 'editMember' : include('include/editMember.php'); break;
           case 'deleteMember' : include('include/deleteMember.php'); break;
           case 'manageProfile' : include('include/manageProfile.php'); break;
