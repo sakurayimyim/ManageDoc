@@ -22,7 +22,7 @@
   <div class="menu-title">
     เมนูจัดการข้อมูลในระบบ
   </div>
-  <div class="left-menu-head pointer left-img-3" id="Report">
+  <div class="left-menu-head pointer left-img-3" id="ReportDoc">
     <div class="pdd-l20 m-head">
         รายงานสรุปเอกสาร
     </div>

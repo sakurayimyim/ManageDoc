@@ -58,6 +58,7 @@
           case 'listMember' : include('include/listMember.php'); break;
           case 'detailDoc' : include('include/detailDoc.php'); break;
           case 'listBank' : include('include/listBank.php'); break;
+          case 'reportDoc' : include('include/reportDoc.php'); break;
           case 'logout' : logout(); break;
           }
      ?>  

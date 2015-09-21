@@ -55,4 +55,7 @@ $("#ListDoc").on('click',function(){
 $("#ManageProfile").on('click',function(){
   window.location.href = 'index.php?page=manageProfile';
 });
+$("#ReportDoc").on('click',function(){
+  window.location.href = 'index.php?page=reportDoc';
+});
 
