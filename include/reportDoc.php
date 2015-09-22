@@ -58,22 +58,31 @@
             <td title="<?=$objJ['JuristicTypeName'] ?>"><div class="justicName">
             <?php echo $objJ['JuristicTypeName'];?>
             </div></td>
-            <td align="center"><?=$objR['doc']?></td>
+            <td align="center">
+            <a href="?page=listReportDoc&pageID=1&bankID=<?=$objR['BankID']?>&juristicTypeID=<?=$objR['JuristicTypeID']?>">
+            <?=$objR['doc']?></a></td>
             <?php
             $sqlNotApprove = "SELECT count(DocID) AS notapprove FROM document 
             WHERE ApproveStatus = '0' AND JuristicTypeID = '".$objR['JuristicTypeID']."' AND BankID = '".$objR['BankID']."'";
             $notApproveQuery = mysql_db_query($dbname, $sqlNotApprove);
             $objNa = mysql_fetch_array($notApproveQuery); ?>
-            <td align="center"><?=$objNa['notapprove'] ?></td>
+            <td align="center">
+            <a href="?page=listReportDoc&pageID=2&bankID=<?=$objR['BankID']?>&juristicTypeID=<?=$objR['JuristicTypeID']?>">
+            <?=$objNa['notapprove'] ?>
+            </a></td>
             <?php 
             $sqlApprove = "SELECT count(DocID) AS approve FROM document 
             WHERE ApproveStatus = '1' AND JuristicTypeID = '".$objR['JuristicTypeID']."'AND BankID = '".$objR['BankID']."'";
             $approveQuery = mysql_db_query($dbname, $sqlApprove);
             $objA = mysql_fetch_array($approveQuery); ?>
-            <td align="center"><?=$objA['approve'] ?></td>
+            <td align="center">
+            <a href="?page=listReportDoc&pageID=3&bankID=<?=$objR['BankID']?>&juristicTypeID=<?=$objR['JuristicTypeID']?>">
+            <?=$objA['approve'] ?>
+            </a></td>
             <td align="center" style="border-right:none;">
+            <a href="?page=listReportDoc&pageID=4&bankID=<?=$objR['BankID']?>&juristicTypeID=<?=$objR['JuristicTypeID']?>">
             <img src="images/pb.png" width="24" height="24">
-            </td>
+            </a></td>
         </tr>
         <?php $num++; } ?>
     </tbody>

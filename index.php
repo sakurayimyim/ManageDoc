@@ -59,6 +59,7 @@
           case 'detailDoc' : include('include/detailDoc.php'); break;
           case 'listBank' : include('include/listBank.php'); break;
           case 'reportDoc' : include('include/reportDoc.php'); break;
+          case 'listReportDoc' : include('include/listReportDoc.php'); break;
           case 'logout' : logout(); break;
           }
      ?>  
