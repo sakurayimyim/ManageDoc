@@ -33,7 +33,7 @@ $pageID = $_GET['pageID'];
           <th >ชื่อลูกค้าสถาบัน/ลูกค้า</th>
           <th>สถานะปัจจุบัน</th>
           <th class="txt-center">ปัญหา</th>
-          <th style="border-right:none;"></th>
+          <th class="txt-center" style="border-right:none;">อนุมัติ</th>
         </tr>
     </thead>
     <tbody>
@@ -50,7 +50,7 @@ $pageID = $_GET['pageID'];
       $docQuery = mysql_db_query($dbname, $sqlDocDetail);
       while ($objR = mysql_fetch_array($docQuery)) {
       ?>
-        <tr>
+        <tr id="DocID<?=$objR['DocID']?>">
           <td align="center"><?=$objR['ListNo']?></td>
             <td><?=$objR['WorkCode']?></td>
             <td><?=$objR['ContractNo']?></td>
@@ -78,15 +78,15 @@ $pageID = $_GET['pageID'];
             <td align="center"><?php if($objR['StatusPresentID']==19){ ?>
               <img src="images/pb.png" width="24" height="24" title="<?=$objPb['ProblemName']?>">
               <? } ?></td>
-            <td style="border-right:none;">
-            <a href=""><img src="images/edit.png" width="24" height="24" title="แก้ไข"></a>
-            <a href=""><img src="images/delete.png" width="24" height="24" title="ลบ"></a></td>
+            <td align="center" style="border-right:none;">
+            <a class="cur-pointer" onClick="ReportApprove(<?=$objR['DocID']?>)"><img src="images/edit.png" width="24" height="24" title="แก้ไข"></a></td>
         </tr>
         <?php } ?>
     </tbody>
 </table>
   </div>
 </div>
+<script src="js/report.js"></script>
 <script type="text/javascript">
 $(document).ready( function () {
     $('#DocTable').DataTable({
@@ -100,7 +100,7 @@ $(document).ready( function () {
       { "sWidth": null},
       { "sWidth": null},
       { "sWidth": "35px"},
-      { "sWidth": "37px"}
+      { "sWidth": "35px"}
     ]
 });  
 });
