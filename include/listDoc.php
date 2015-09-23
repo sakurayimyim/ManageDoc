@@ -67,7 +67,7 @@
               <img src="images/pb.png" width="24" height="24" title="<?=$objPb['ProblemName']?>">
               <? } ?></td>
             <td style="border-right:none;">
-            <a href=""><img src="images/edit.png" width="24" height="24" title="แก้ไข"></a>
+            <a href="?page=editDoc&id=<?=$objR['DocID']?>"><img src="images/edit.png" width="24" height="24" title="แก้ไข"></a>
             <a href=""><img src="images/delete.png" width="24" height="24" title="ลบ"></a></td>
         </tr>
         <?php } ?>

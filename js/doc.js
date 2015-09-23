@@ -1,4 +1,25 @@
+$('#newDocument a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+$('#editDocument a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
 $("#JuristicTypeID").on('change',function(){
+	SetJuristicTypeID();
+});
+$("#ProblemID").on('change',function(){
+	SetProblemID();
+});
+$("#SolutionID").on('change',function(){
+	SetSolutionID();
+});
+$("#StatusPresentID").on("change",function(){
+	SetStatusPresentID();
+})
+
+function SetJuristicTypeID(){
 	var JuristicTypeID = $("#JuristicTypeID").val();
 	if(JuristicTypeID == 12){
 		$("#JuristicTypeMore").css("display","block");
@@ -7,8 +28,8 @@ $("#JuristicTypeID").on('change',function(){
 		$("#OtherJuristicType").val("");
 		$("#JuristicTypeMore").css("display","none");
 	}
-});
-$("#ProblemID").on('change',function(){
+}
+function SetProblemID(){
 	var ProblemID = $("#ProblemID").val();
 	if(ProblemID == 40){
 		$("#OtherProblemMore").css("display","block");
@@ -17,8 +38,8 @@ $("#ProblemID").on('change',function(){
 		$("#OtherProblem").val("");
 		$("#OtherProblemMore").css("display","none");
 	}
-});
-$("#SolutionID").on('change',function(){
+}
+function SetSolutionID(){
 	var SolutionID = $("#SolutionID").val();
 	if(SolutionID == 6){
 		$("#OtherSolutionMore").css("display","block");
@@ -27,8 +48,8 @@ $("#SolutionID").on('change',function(){
 		$("#OtherSolution").val("");
 		$("#OtherSolutionMore").css("display","none");
 	}
-});
-$("#StatusPresentID").on("change",function(){
+}
+function SetStatusPresentID(){
 	var StatusPresentID = $("#StatusPresentID").val();
 	if(StatusPresentID == 19){
 		$("#ProblemDetail").css("display","block");
@@ -50,6 +71,27 @@ $("#StatusPresentID").on("change",function(){
 		$("#OtherStatusPresent").val("");
 		$("#StatusPresentMore").css("display","none");
 	}
-	
-})
+}
+$.validator.addMethod('selectcheck', function (value) {
+	return (value != '0');
+}, "กรุณาเลือกข้อมูล");
+$(".from-doc").validate({
+      rules: {
+        ListNo: "required",
+        WorkCode: "required",
+        App: "required",
+        JuristicTypeID: "selectcheck",
+        BankID: "selectcheck",
+        ContractNo: "required",
+        ResponseEmpID: "selectcheck",
+        ResponseHeadID: "selectcheck"
+     },
+      messages: {
+    	ListNo: "กรุณากรอกข้อมูล",
+    	WorkCode: "กรุณากรอกข้อมูล",
+    	App: "กรุณากรอกข้อมูล",
+    	ContractNo: "กรุณากรอกข้อมูล"
+  	}
+});   
+
 

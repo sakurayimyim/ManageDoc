@@ -530,31 +530,6 @@
 <script src="js/doc.js"></script>
 <!--****************Script ***************************-->
 <script type="text/javascript">
-$('#newDocument a').click(function (e) {
-  e.preventDefault()
-  $(this).tab('show')
-})
-$.validator.addMethod('selectcheck', function (value) {
-	return (value != '0');
-}, "กรุณาเลือกข้อมูล");
-$(".from-doc").validate({
-      rules: {
-        ListNo: "required",
-        WorkCode: "required",
-        App: "required",
-        JuristicTypeID: "selectcheck",
-        BankID: "selectcheck",
-        ContractNo: "required",
-        ResponseEmpID: "selectcheck",
-        ResponseHeadID: "selectcheck"
-     },
-      messages: {
-    	ListNo: "กรุณากรอกข้อมูล",
-    	WorkCode: "กรุณากรอกข้อมูล",
-    	App: "กรุณากรอกข้อมูล",
-    	ContractNo: "กรุณากรอกข้อมูล"
-  	}
-});   
 $("#SubmitFrmNewDoc").on('click',function(){
 		if($(".from-doc").valid()){
 			$.ajax({

@@ -99,7 +99,7 @@ if($sqlQuery != "" && $_POST['StatusPresentID'] == 19 && $_POST['ProblemID'] > 0
 		$ProblemName = $dataProb['ProblemName'];
 	}
 	if($_POST['SolutionID'] == 6){
-		$SolutionName = $_POST['OtherProblem'];
+		$SolutionName = $_POST['OtherSolution'];
 	}else{
 		$sqlSolution = "SELECT SolutionName from solution Where SolutionID = '".$_POST['SolutionID']."'";
 		$solutionQuery = mysql_db_query($dbname, $sqlSolution);

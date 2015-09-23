@@ -97,10 +97,10 @@ WHERE document.DocID = $DocID";
 			<td width="35%">แนวทางแก้ไข</td>
 		</tr>
     <?php 
+     $ListNo = 1;
       $sqlLogProb = "select * from documentproblemlog where DocID = $DocID";
       $logProbQuery = mysql_db_query($dbname, $sqlLogProb);
       while ($objLogProb = mysql_fetch_array($logProbQuery)) {
-        $ListNo = 1;
     ?>
     <tr>
       <td><?=$ListNo?></td>

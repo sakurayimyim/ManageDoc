@@ -1,6 +1,6 @@
 <?php
 function ConvertDate($Date,$ToFormat){
-	if($Date != null && $Date != ""){
+	if($Date != null && $Date != "" && $Date != "0000-00-00"){
 		$strDate = str_replace('/', '-', $Date);
 		$newDate = date($ToFormat, strtotime($strDate));
 		return $newDate;
