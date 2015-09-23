@@ -52,7 +52,7 @@ $pageID = $_GET['pageID'];
       ?>
         <tr id="DocID<?=$objR['DocID']?>">
           <td align="center"><?=$objR['ListNo']?></td>
-            <td><?=$objR['WorkCode']?></td>
+            <td><a href="?page=detailDoc&id=<?=$objR['DocID']?>"> <?=$objR['WorkCode']?></a></td>
             <td><?=$objR['ContractNo']?></td>
             <?php
             $sqlJuristicType = "SELECT JuristicTypeID, JuristicTypeName FROM juristictype WHERE JuristicTypeID = '".$objR['JuristicTypeID']."'";

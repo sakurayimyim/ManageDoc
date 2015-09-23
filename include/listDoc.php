@@ -34,13 +34,13 @@
     </thead>
     <tbody>
     <?php
-      $sqlDocDetail = "SELECT * FROM document";
+      $sqlDocDetail = "SELECT * FROM document WHERE IsDelete = 0";
       $docQuery = mysql_db_query($dbname, $sqlDocDetail);
       while ($objR = mysql_fetch_array($docQuery)) {
       ?>
         <tr>
           <td align="center"><?=$objR['ListNo']?></td>
-            <td><?=$objR['WorkCode']?></td>
+            <td><a href="?page=detailDoc&id=<?=$objR['DocID']?>"><?=$objR['WorkCode']?></a></td>
             <td><?=$objR['ContractNo']?></td>
             <?php
             $sqlJuristicType = "SELECT JuristicTypeID, JuristicTypeName FROM juristictype WHERE JuristicTypeID = '".$objR['JuristicTypeID']."'";
@@ -68,13 +68,17 @@
               <? } ?></td>
             <td style="border-right:none;">
             <a href="?page=editDoc&id=<?=$objR['DocID']?>"><img src="images/edit.png" width="24" height="24" title="แก้ไข"></a>
-            <a href=""><img src="images/delete.png" width="24" height="24" title="ลบ"></a></td>
+            <a class="cur-pointer" onClick="DocDel(<?=$objR['DocID']?>)">
+              <img src="images/delete.png" width="24" height="24" title="ลบ">
+              </a>
+            </td>
         </tr>
         <?php } ?>
     </tbody>
 </table>
   </div>
 </div>
+<script src="js/doc.js"></script>
 <script type="text/javascript">
 $(document).ready( function () {
     $('#DocTable').DataTable({

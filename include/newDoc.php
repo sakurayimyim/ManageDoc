@@ -35,11 +35,11 @@
 	<div class="info">
 		<div class="info_left">
 			<div class="label_left"><font color="red">*</font> ลำดับที่ :</div>
-			<div class="label_right"><input name="ListNo" id="ListNo" type="text" class="form-control form-w120" value="<?=$numList?>" ></div>
+			<div class="label_right"><input name="ListNo" id="ListNo" type="text" class="form-control form-w120" value="<?=$numList?>" disabled></div>
 		</div>
 		<div class="info_left">
 			<div class="label_left"><font color="red">*</font> รหัสงานบริษัท :</div>
-			<div class="label_right"><input name="WorkCode" id="WorkCode" type="text" class="form-control form-w250" value="<?=$workCode?>" ></div>
+			<div class="label_right"><input name="WorkCode" id="WorkCode" type="text" class="form-control form-w250" value="<?=$workCode?>" disabled></div>
 		</div>
 		<div class="info_left">
 			<div class="label_left"><font color="red">*</font> APP :</div>

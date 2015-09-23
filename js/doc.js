@@ -93,5 +93,30 @@ $(".from-doc").validate({
     	ContractNo: "กรุณากรอกข้อมูล"
   	}
 });   
+function DocDel(DocID){
+	if(DocID != null && DocID != ""){
+    bootbox.confirm("คุณต้องการลบเอกสาร ?", function(result){ 
+      if(result){
+        $.ajax({
+           type: "POST",
+           url: 'include/deleteDoc.php',
+           data: { 
+            DocID : DocID
+           }, 
+           success: function(data)
+           {
+            console.log(data);
+            if(data.IsResult == true){
+              AlertSuccess();
+                window.location.href = 'index.php?page=listDoc';
+            }else{
+              AlertError();
+            }
+           }
+         });
+      }
+    })
+	}
+}
 
 
