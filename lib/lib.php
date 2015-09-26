@@ -36,4 +36,29 @@ function FullDateThai($strDate){
 		return null;
 	}
 }
+function CheckLogin(){
+  if(!isset($_SESSION['MemberID'])){
+     echo "<script>window.location = '/ManageDoc/login.php';</script>";
+  }
+}
+function PriorityDocCheck(){
+	$MemberID = $_SESSION['MemberID'];
+	$MemberType = $_SESSION['MemberType'];
+  if($MemberID != "" && $MemberType != ""){
+    switch ($MemberType) {
+    		case '2':
+    			$page = $_GET['page'];
+    			if($page == 'reportDoc' || $page == 'listReportDoc' || $page == 'listMember' || $page == 'newMember' || $page == 'editMember' || $page == 'deleteMember'){
+    					echo "<script>window.location.href = 'index.php?page=listDoc</script>";
+    				}
+    		break;
+    		case '3':
+    		break;
+    	default:
+    		break;
+    }
+  }else{
+    echo "<script>window.location.href = 'index.php?page=detailDoc&id='+data.DocID;</script>";
+  }
+}
 ?>

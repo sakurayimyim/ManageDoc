@@ -2,9 +2,7 @@
   session_start(); 
   include('config/config.php');
   include('lib/lib.php');
-  if($_SESSION['MemberID'] == ""){
-    echo "<script>window.location = '/ManageDoc/login.php';</script>";
-  }
+  CheckLogin();
 ?>
 <!DOCTYPE html>
 <html>

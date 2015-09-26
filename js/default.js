@@ -58,4 +58,23 @@ $("#ManageProfile").on('click',function(){
 $("#ReportDoc").on('click',function(){
   window.location.href = 'index.php?page=reportDoc';
 });
+/*
+function IsMyData(id){
+        $.ajax({
+           type: "POST",
+           url: 'include/insertDoc.php',
+           data: $("#frmNewDoc").serialize(), 
+           success: function(data)
+           {
+            console.log(data);
+            if(data.IsResult == true){
+              AlertSuccess();
+                window.location.href = 'index.php?page=detailDoc&id='+data.DocID;
+            }else{
+              AlertError();
+            }
+           }
+        });
+}
+*/
 

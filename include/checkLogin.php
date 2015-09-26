@@ -1,9 +1,9 @@
 <?php session_start(); 
 include('../config/config.php');
-$Username = $_POST['Username'];
+$Username = mysql_real_escape_string($_POST['Username']);
 $Password = base64_encode($_POST['Password']);
 if($Username != "" && $Password != ""){
-	$sql = "select * from member where Username = '$Username' and Password = '$Password'";
+	$sql = "select * from member where Username = '$Username' and Password = '$Password' AND Status = 1";
 	$sqlResult = mysql_db_query($dbname,$sql);
 	$objResult = mysql_fetch_array($sqlResult);
 	$num = mysql_num_rows($sqlResult);
