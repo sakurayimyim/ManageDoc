@@ -72,6 +72,18 @@ function SetStatusPresentID(){
 		$("#StatusPresentMore").css("display","none");
 	}
 }
+function ValidTeb2(){
+	var ResponseEmpID = $("#ResponseEmpID").val();
+	var ResponseHeadID = $("#ResponseHeadID").val();
+	var RecieveWorkDate = $("#RecieveWorkDate").val();
+	if(RecieveWorkDate == "" || ResponseEmpID == "0" || ResponseHeadID == "0"){
+		$("#perneldetail-tab").click();
+		bootbox.alert("กรุณากรอกข้อมูลให้ครบ", function() {});
+		return false;
+	}else{
+		return true;
+	}
+}
 $.validator.addMethod('selectcheck', function (value) {
 	return (value != '0');
 }, "กรุณาเลือกข้อมูล");
@@ -83,6 +95,7 @@ $(".from-doc").validate({
         JuristicTypeID: "selectcheck",
         BankID: "selectcheck",
         ContractNo: "required",
+        RecieveWorkDate: "required",
         ResponseEmpID: "selectcheck",
         ResponseHeadID: "selectcheck"
      },
@@ -90,7 +103,8 @@ $(".from-doc").validate({
     	ListNo: "กรุณากรอกข้อมูล",
     	WorkCode: "กรุณากรอกข้อมูล",
     	App: "กรุณากรอกข้อมูล",
-    	ContractNo: "กรุณากรอกข้อมูล"
+    	ContractNo: "กรุณากรอกข้อมูล",
+    	RecieveWorkDate: "กรุณากรอกข้อมูล",
   	}
 });   
 function DocDel(DocID){

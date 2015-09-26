@@ -35,11 +35,11 @@
 	<div class="info">
 		<div class="info_left">
 			<div class="label_left"><font color="red">*</font> ลำดับที่ :</div>
-			<div class="label_right"><input name="ListNo" id="ListNo" type="text" class="form-control form-w120" value="<?=$numList?>" disabled></div>
+			<div class="label_right"><input type="text" name="ListNo" id="ListNo" class="form-control form-w120" value="<?=$numList?>" readonly></div>
 		</div>
 		<div class="info_left">
 			<div class="label_left"><font color="red">*</font> รหัสงานบริษัท :</div>
-			<div class="label_right"><input name="WorkCode" id="WorkCode" type="text" class="form-control form-w250" value="<?=$workCode?>" disabled></div>
+			<div class="label_right"><input type="text" name="WorkCode" id="WorkCode" class="form-control form-w250" value="<?=$workCode?>" readonly></div>
 		</div>
 		<div class="info_left">
 			<div class="label_left"><font color="red">*</font> APP :</div>
@@ -531,7 +531,7 @@
 <!--****************Script ***************************-->
 <script type="text/javascript">
 $("#SubmitFrmNewDoc").on('click',function(){
-		if($(".from-doc").valid()){
+		if($(".from-doc").valid() && ValidTeb2()){
 			$.ajax({
            type: "POST",
            url: 'include/insertDoc.php',

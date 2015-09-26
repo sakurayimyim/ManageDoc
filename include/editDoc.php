@@ -1,5 +1,6 @@
 <?php
-	$sqlSelectDoc = "SELECT * FROM document WHERE DocID = '".$_GET['id']."'";
+	$id = decryptStringArray($_GET['id']);
+	$sqlSelectDoc = "SELECT * FROM document WHERE DocID = '".$id."'";
 	$selectDocQuery = mysql_db_query($dbname, $sqlSelectDoc);
 	$dataDoc = mysql_fetch_array($selectDocQuery);
 ?>
@@ -28,11 +29,11 @@
 	<div class="info">
 		<div class="info_left">
 			<div class="label_left"><font color="red">*</font> ลำดับที่ :</div>
-			<div class="label_right"><input name="ListNo" id="ListNo" type="text" class="form-control form-w120" value="<?=$dataDoc['ListNo']?>" disabled></div>
+			<div class="label_right"><input name="ListNo" id="ListNo" type="text" class="form-control form-w120" value="<?=$dataDoc['ListNo']?>" readonly></div>
 		</div>
 		<div class="info_left">
 			<div class="label_left"><font color="red">*</font> รหัสงานบริษัท :</div>
-			<div class="label_right"><input name="WorkCode" id="WorkCode" type="text" class="form-control form-w250" value="<?=$dataDoc['WorkCode']?>" disabled></div>
+			<div class="label_right"><input name="WorkCode" id="WorkCode" type="text" class="form-control form-w250" value="<?=$dataDoc['WorkCode']?> readonly"></div>
 		</div>
 		<div class="info_left">
 			<div class="label_left"><font color="red">*</font> APP :</div>
@@ -510,7 +511,7 @@
 </div>
 </div>
 <!--*************************************Sheet 3 End ****************-->
-<input type="hidden" name="DocID" value="<?=$_GET['id']?>">
+<input type="hidden" name="DocID" value="<?=$dataDoc['DocID']?>">
 </div>
 <div class="clean mt-57"></div>
 <div class="content-save">

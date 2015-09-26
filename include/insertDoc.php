@@ -125,7 +125,7 @@ if($sqlQuery){
 		
 		$json = array(
 			'IsResult'=>true,
-			'DocID'=>$DocID,
+			'DocID'=> encryptStringArray($DocID),
 			);
 	}else{
 		$json = array(

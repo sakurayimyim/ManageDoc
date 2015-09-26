@@ -1,5 +1,5 @@
 <?php 
-$DocID = $_GET['id'];
+$DocID = decryptStringArray($_GET['id']);
 $sql="select * from document
 JOIN bank ON (document.BankID = bank.BankID) 
 JOIN juristictype ON (document.JuristicTypeID = juristictype.JuristicTypeID)

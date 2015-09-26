@@ -37,10 +37,11 @@
       $sqlDocDetail = "SELECT * FROM document WHERE IsDelete = 0";
       $docQuery = mysql_db_query($dbname, $sqlDocDetail);
       while ($objR = mysql_fetch_array($docQuery)) {
+        $DocID =  encryptStringArray($objR['DocID']);
       ?>
         <tr>
           <td align="center"><?=$objR['ListNo']?></td>
-            <td><a href="?page=detailDoc&id=<?=$objR['DocID']?>"><?=$objR['WorkCode']?></a></td>
+            <td><a href="?page=detailDoc&id=<?=$DocID?>"><?=$objR['WorkCode']?></a></td>
             <td><?=$objR['ContractNo']?></td>
             <?php
             $sqlJuristicType = "SELECT JuristicTypeID, JuristicTypeName FROM juristictype WHERE JuristicTypeID = '".$objR['JuristicTypeID']."'";
@@ -67,8 +68,8 @@
               <img src="images/pb.png" width="24" height="24" title="<?=$objPb['ProblemName']?>">
               <? } ?></td>
             <td style="border-right:none;">
-            <a href="?page=editDoc&id=<?=$objR['DocID']?>"><img src="images/edit.png" width="24" height="24" title="แก้ไข"></a>
-            <a class="cur-pointer" onClick="DocDel(<?=$objR['DocID']?>)">
+            <a href="?page=editDoc&id=<?=$DocID?>"><img src="images/edit.png" width="24" height="24" title="แก้ไข"></a>
+            <a class="cur-pointer" onClick="DocDel(<?=$DocID?>)">
               <img src="images/delete.png" width="24" height="24" title="ลบ">
               </a>
             </td>
