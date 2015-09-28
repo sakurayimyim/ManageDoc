@@ -604,10 +604,32 @@ ul.left-menu li.active{
 	background-color:#3987c5;
 	color: #ffffff;
 }
+
+.menu-left-reportDoc-active{
+  color: #ffffff;
+  background: #3987c5  url(../images/leftmenu/add-userw.png) 20px 12px no-repeat;
+
+}
  .menu-left-newMem-active{
   color: #ffffff;
   background: #3987c5  url(../images/leftmenu/add-userw.png) 20px 12px no-repeat;
 
+}
+.menu-left-listMem-active{
+	color: #ffffff;
+  background: #3987c5  url(../images/leftmenu/userw.png) 20px 12px no-repeat;
+}
+.menu-left-manageProfile-active{
+	color: #ffffff;
+  background: #3987c5  url(../images/leftmenu/cogw.png) 20px 12px no-repeat;
+}
+.menu-left-newDoc-active{
+	color: #ffffff;
+  background: #3987c5  url(../images/leftmenu/adddocw.png) 20px 12px no-repeat;
+}
+.menu-left-listDoc-active{
+	color: #ffffff;
+  background: #3987c5  url(../images/leftmenu/file-text2w.png) 20px 12px no-repeat;
 }
 .system-herder{
 	width:100%;
