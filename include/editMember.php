@@ -1,6 +1,6 @@
 <?php
 	$id = $_GET['id'];
-	echo $sqlMember = "select * from member where MemberID = $id";
+	$sqlMember = "select * from member where MemberID = $id";
 	$sqlQuery = mysql_db_query($dbname, $sqlMember);
 	$objResult = mysql_fetch_array($sqlQuery);
 ?>
@@ -33,7 +33,7 @@
 		<div class="clean"></div> 
 		<div class="info_left">
 			<div class="label_left"><font color="red">*</font> ยืนยันรหัสผ่าน :</div>
-			<div class="label_right"><input type="password" class="form-control" name="CfmPassword" value="<? echo base64_decode($objResult['Password']) ?>" ></div>
+			<div class="label_right"><input type="password" class="form-control" name="CfmPassword" id="CfmPassword" value="<? echo base64_decode($objResult['Password']) ?>" ></div>
 		</div>
 		<div class="clean"></div>
 		<div class="info_left">
@@ -146,6 +146,18 @@ $( document ).ready(function(){
 	if(Institute != 0 && Institute != ""){
 		$("#Institute").prop('disabled',false);
 	}
+	$("#Password").focus(function(){
+		$("#Password").attr("type","text")
+	})
+	$("#Password").blur(function(){
+		$("#Password").attr("type","password")
+	});
+	$("#CfmPassword").focus(function(){
+		$("#CfmPassword").attr("type","text")
+	})
+	$("#CfmPassword").blur(function(){
+		$("#CfmPassword").attr("type","password")
+	});
 })
 </script>
 

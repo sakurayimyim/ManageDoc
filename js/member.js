@@ -92,6 +92,26 @@ $("#SubmitFrmEditMember").on('click',function(){
 		}
     return false;
 });
+$("#SubmitFrmEditProfile").on('click',function(){
+    if($(".from-member").valid()){
+      $.ajax({
+           type: "POST",
+           url: 'include/updateProfile.php',
+           data: $("#frmEditProfile").serialize(), 
+           success: function(data)
+           {
+            console.log(data);
+            if(data.IsResult == true){
+              AlertSuccess();
+                //window.location.href = 'index.php?page=editMember&id='+data.MemberID;
+            }else{
+              AlertError();
+            }
+           }
+         });
+    }
+    return false;
+});
 function MemberDel(MemberID){
 	if(MemberID != null && MemberID != ""){
     bootbox.confirm("คุณต้องการลบสมาชิก ?", function(result){ 

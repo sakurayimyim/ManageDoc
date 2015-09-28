@@ -68,7 +68,7 @@
 <?php
   function logout(){
   session_destroy();
-  echo "<meta http-equiv='refresh' content='2; url=/ManageDoc/login.php'>";
+  echo "<script>window.location.href = '/ManageDoc/login.php'</script>";
   /*
   global $dbname;
   $sqllog="select * from log where sessID = '".$_SESSION['sessID']."'";
