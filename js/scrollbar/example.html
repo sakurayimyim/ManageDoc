@@ -1,0 +1,81 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=tis-620">
+<title>:: ทำ SCROLLBAR เหมือน Facebook ให้กับเนื้อหาที่ต้องการ ::</title>
+<STYLE type=text/css>
+  A:link { color: #0000cc; text-decoration:none}
+  A:visited {color: #0000cc; text-decoration: none}
+  A:hover {color: red; text-decoration: none}
+ </STYLE>
+<style type="text/css">
+<!--
+small { font-family: Arial, Helvetica, sans-serif; font-size: 8pt; } 
+input, textarea { font-family: Arial, Helvetica, sans-serif; font-size: 9pt; } 
+b { font-family: Arial, Helvetica, sans-serif; font-size: 12pt; } 
+big { font-family: Arial, Helvetica, sans-serif; font-size: 20pt; } 
+strong { font-family: Arial, Helvetica, sans-serif; font-size: 11pt; font-weight : extra-bold; } 
+font, td { font-family: Arial, Helvetica, sans-serif; font-size: 11pt; } 
+BODY { font-size: 9pt; font-family: Arial, Helvetica, sans-serif; } 
+-->
+</style>
+
+
+<link href="general.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+<script type="text/javascript" src="jquery.ui.touch-punch.min.js"></script>
+
+<script type="text/javascript" src="facescroll.js">
+/***********************************************
+* FaceScroll custom scrollbar (c) Dynamic Drive (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit http://www.dynamicdrive.com/ for this script and 100s more.
+***********************************************/
+</script>
+
+<script type="text/javascript">
+	jQuery(function(){ // on page DOM load
+		$('#demo1').alternateScroll();
+		$('#demo2').alternateScroll({ 'vertical-bar-class': 'styled-v-bar', 'hide-bars': false });	
+	})
+</script>
+
+</head>
+
+<body bgcolor="pink">
+
+<center>
+<big>:: ทำ SCROLLBAR เหมือน Facebook ให้กับเนื้อหาที่ต้องการ ::</big>
+</center>
+
+<p><b>รูปแบบที่ 1 : แสดง SCROLLBAR เมื่อนำ Mouse ไปวาง</b></p>
+
+<div id="demo1" style="width:300px; height:250px; padding:8px; background:lightyellow; border:1px solid gray; resize:both; overflow:scroll">
+
+From Wikipedia- Gunpowder, also known since in the late 19th century as black powder, was the first chemical explosive and the only one known until the mid 1800s.[2] It is a mixture of sulfur, charcoal, and potassium nitrate (saltpeter) - with the sulfur and charcoal acting as fuels, while the saltpeter works as an oxidizer.[3] Because of its burning properties and the amount of heat and gas volume that it generates, gunpowder has been widely used as a propellant in firearms and as a pyrotechnic composition in fireworks. Gunpowder was, according to prevailing academic consensus, discovered in the 9th century in China, attributed to Chinese alchemists searching for an elixir of immortality.[4] This discovery led to the invention of fireworks and the earliest gunpowder weapons in China. In the centuries following the Chinese discovery, gunpowder weapons began appearing in the Arab world, Europe, and India. The consensus is that this was spread from China, through the Middle East, and then into Europe,[5] although there remains some dispute over the amount of Chinese influence on later advancements in gunpowder technology. Gunpowder is classified as a low explosive because of its relatively slow decomposition rate and consequently low brisance. Low explosives deflagrate at subsonic speeds, whereas high explosives detonate, producing a supersonic wave. Ignition of the powder packed behind a bullet must generate enough pressure to force it from the muzzle at high speed, but not enough to rupture the gun barrel. Gunpowder is thus less suitable for shattering rock or fortifications. Gunpowder was widely used to fill artillery shells and in mining and civil engineering to blast rock roughly until the 2nd half of the 19th century, when the first high explosives (nitro-explosives) were discovered. Gunpowder is no longer used in modern explosive military warheads, nor is it used as main explosive in mining operations due to its cost relative to that of newer alternatives like ANFO.
+
+</div>
+
+<br />
+
+<p><b>รูปแบบที่ 2 : แสดง SCROLLBAR ตลอดเวลา</b></p>
+
+<div id="demo2" style="width:400px; height:130px; padding:10px; padding-right:8px; background:lightyellow; border:1px solid gray; overflow:scroll; resize:both;">
+
+From Wikipedia- Gunpowder, also known since in the late 19th century as black powder, was the first chemical explosive and the only one known until the mid 1800s.[2] It is a mixture of sulfur, charcoal, and potassium nitrate (saltpeter) - with the sulfur and charcoal acting as fuels, while the saltpeter works as an oxidizer.[3] Because of its burning properties and the amount of heat and gas volume that it generates, gunpowder has been widely used as a propellant in firearms and as a pyrotechnic composition in fireworks. Gunpowder was, according to prevailing academic consensus, discovered in the 9th century in China, attributed to Chinese alchemists searching for an elixir of immortality.[4] This discovery led to the invention of fireworks and the earliest gunpowder weapons in China. In the centuries following the Chinese discovery, gunpowder weapons began appearing in the Arab world, Europe, and India. The consensus is that this was spread from China, through the Middle East, and then into Europe,[5] although there remains some dispute over the amount of Chinese influence on later advancements in gunpowder technology.
+
+</div>
+<br />
+- <a href="javascript:$('#demo2').alternateScroll('remove');">Remove facescroll scrollbar</a><br />
+- <a href="javascript:$('#demo2').alternateScroll({'vertical-bar-class': 'styled-v-bar', 'hide-bars': false });">Add facescroll scrollbar</a>
+
+<br><br>
+<hr width="75%" color="blue">
+<center><big><a href="http://www.codetukyang.com" target="_blank">CodeTukYang.Com</a></big></center>
+<hr width="75%" color="blue">
+
+
+</body>
+</html>
