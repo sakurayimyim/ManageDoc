@@ -45,7 +45,7 @@
             ?>
             </td>
             <td style="border-right:none;">
-              <a href="?page=editMember&id=<?=$objResult['MemberID']?>">
+              <a href="?page=editMember&id=<?=encryptStringArray($objResult['MemberID'])?>">
               <img src="images/edit.png" width="24" height="24" title="แก้ไข"></a>
               <a class="cur-pointer" onClick="MemberDel(<?=$objResult['MemberID']?>)">
               <img src="images/delete.png" width="24" height="24" title="ลบ"></a>

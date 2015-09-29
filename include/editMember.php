@@ -1,5 +1,5 @@
 <?php
-	$id = $_GET['id'];
+	$id = decryptStringArray($_GET['id']);
 	$sqlMember = "select * from member where MemberID = $id";
 	$sqlQuery = mysql_db_query($dbname, $sqlMember);
 	$objResult = mysql_fetch_array($sqlQuery);
