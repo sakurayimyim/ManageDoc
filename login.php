@@ -27,11 +27,11 @@
       <div class="login_from">
         <input type="text" class="form-control" style="height:40px" name="Username" id="Username" placeholder="Username">
       </div>
-      <div class="clean"></div>
+      <div class="clean20"></div>
       <div class="login_from">
         <input type="password" class="form-control" style="height:40px" name="Password" id="Password" placeholder="Password">
       </div>
-      <div class="clean"></div>
+      <div class="clean20"></div>
       <div style="float:left;margin-left:35px;"><a href="?page=forgetpass">ลืมรหัสผ่าน ?</a></div>
       <div style="float:right;margin-right:35px;">
       <input type="button" id="submit" class="btn_login alert" name="submit"value="เข้าสู่ระบบ"/>
@@ -48,9 +48,16 @@
 </html>
 
 <script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script type="text/javascript">
+$(document).keypress(function(e) {
+    if(e.which == 13) {
+        $("#submit").click();
+    }
+});
 $("#submit").on('click',function(){
+  if($("#frmLogin").valid()){
     $.ajax({
            type: "POST",
            url: 'include/checkLogin.php',
@@ -72,7 +79,19 @@ $("#submit").on('click',function(){
             }
            }
          });
+  }else{
     return false;
+  }
+});
+$("#frmLogin").validate({
+      rules: {
+        Username: "required",
+        Password: "required"
+     },
+      messages: {
+      Username: "กรุณากรอกข้อมูล",
+      Password: "กรุณากรอกข้อมูล",
+    }
 });
 function AlertSuccess(){
   $(".alert-success").fadeIn( "slow", function() {
