@@ -23,7 +23,7 @@
     เมนูจัดการข้อมูลในระบบ
   </div>
   <?php if($_SESSION['MemberType'] == 1){ ?>
-  <div class="left-menu-head pointer left-img-3 <?php if($_GET['page'] == 'reportDoc'){ echo "menu-left-reportDoc-active"; } ?>" id="ReportDoc">
+  <div class="left-menu-head pointer left-img-7 <?php if($_GET['page'] == 'reportDoc'){ echo "menu-left-reportDoc-active"; } ?>" id="ReportDoc">
     <div class="pdd-l20 m-head">
         รายงานสรุปเอกสาร
     </div>

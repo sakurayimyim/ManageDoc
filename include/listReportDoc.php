@@ -39,13 +39,13 @@ $pageID = $_GET['pageID'];
     <tbody>
     <?php
       if($pageID==1){
-        $sqlDocDetail = "SELECT * FROM document WHERE IsDelete='0' AND BankID='$bankID' AND JuristicTypeID='$juristicTypeID'";
+        $sqlDocDetail = "SELECT * FROM document WHERE IsDelete='0' AND BankID='$bankID' AND JuristicTypeID='$juristicTypeID' ORDER BY ApproveStatus ASC";
       }else if ($pageID==2) {
         $sqlDocDetail = "SELECT * FROM document WHERE IsDelete='0' AND BankID='$bankID' AND JuristicTypeID='$juristicTypeID' AND ApproveStatus='0'";
       }else if ($pageID==3) {
         $sqlDocDetail = "SELECT * FROM document WHERE IsDelete='0' AND BankID='$bankID' AND JuristicTypeID='$juristicTypeID' AND ApproveStatus='1'";
       }else if ($pageID==4) {
-        $sqlDocDetail = "SELECT * FROM document WHERE IsDelete='0' AND BankID='$bankID' AND JuristicTypeID='$juristicTypeID' AND StatusPresentID='19'";
+        $sqlDocDetail = "SELECT * FROM document WHERE IsDelete='0' AND BankID='$bankID' AND JuristicTypeID='$juristicTypeID' AND StatusPresentID='19' ORDER BY ApproveStatus ASC";
       }
       $docQuery = mysql_db_query($dbname, $sqlDocDetail);
       while ($objR = mysql_fetch_array($docQuery)) {
@@ -79,7 +79,11 @@ $pageID = $_GET['pageID'];
               <img src="images/pb.png" width="24" height="24" title="<?=$objPb['ProblemName']?>">
               <? } ?></td>
             <td align="center" style="border-right:none;">
-            <a class="cur-pointer" onClick="ReportApprove(<?=$objR['DocID']?>)"><img src="images/edit.png" width="24" height="24" title="แก้ไข"></a></td>
+            <?php if($objR['ApproveStatus']==0){ ?>
+            <a class="cur-pointer" onClick="ReportApprove(<?=$objR['DocID']?>)"><img src="images/approvegr.png" width="24" height="24" title="อนุมัติ"></a></td>
+            <?php }else{ ?>
+                        <a><img src="images/approveg.png" width="24" height="24" title="อนุมัติแล้ว"></a></td>
+            <?php } ?>
         </tr>
         <?php } ?>
     </tbody>

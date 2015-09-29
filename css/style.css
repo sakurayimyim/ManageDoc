@@ -606,6 +606,12 @@ ul.left-menu li.active{
 .left-img-6:hover{
 	background: url(../images/leftmenu/logoutw.png) 20px 12px no-repeat;
 }
+.left-img-7{
+	background: #263238 url(../images/leftmenu/reportg.png) 20px 12px no-repeat;
+}
+.left-img-7:hover{
+	background: url(../images/leftmenu/reportw.png) 20px 12px no-repeat;
+}
 
 .left-menu-head:hover{
 	background-color:#3987c5;
@@ -614,7 +620,7 @@ ul.left-menu li.active{
 
 .menu-left-reportDoc-active{
   color: #ffffff;
-  background: #3987c5  url(../images/leftmenu/add-userw.png) 20px 12px no-repeat;
+  background: #3987c5  url(../images/leftmenu/reportw.png) 20px 12px no-repeat;
 
 }
  .menu-left-newMem-active{
@@ -905,7 +911,7 @@ ul.left-menu li.active{
 }
 .nav>li>a {
 	text-align: center;
-	background-color: #0866C6;
+	background-color: #3987c5;
 	color: #fff;
 }
 .nav>li{
