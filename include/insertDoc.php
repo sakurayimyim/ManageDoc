@@ -121,6 +121,45 @@ if($sqlQuery != "" && $_POST['StatusPresentID'] == 19 && $_POST['ProblemID'] > 0
 	$ProbLogQuery = mysql_db_query($dbname, $sqlDocProbLog);
 }
 
+if(count($_POST['MachineName']) > 0){
+	for ($i=0; $i < count($_POST['MachineName']); $i++) { 
+			$sqlMachine = "INSERT INTO machine VALUES('',
+			'$DocID',
+			'".$_POST['MachineLocationName']."',
+			'".$_POST['MachineName'][$i]."',
+			'".$_POST['MachineNameEng'][$i]."',
+			'".$_POST['MachineModel'][$i]."',
+			'".$_POST['MachineGen'][$i]."',
+			'".$_POST['MachineNo'][$i]."',
+			'".$_POST['MachineSize'][$i]."',
+			'".$_POST['MachineAbility'][$i]."',
+			'".$_POST['MachineBuilder'][$i]."',
+			'".$_POST['MachinePrice'][$i]."',
+			'',
+			'".$_POST['MacLocLatitute'][$i]."',
+			'".$_POST['MacLocLongitute'][$i]."',
+			'',
+			'',
+			'0',
+			'".$_SESSION['MemberID']."', 
+			NOW(),
+			'".$_SESSION['MemberID']."',
+			NOW())";
+		$machineQuery = mysql_db_query($dbname, $sqlMachine);
+		$MachineID = mysql_insert_id();
+		//echo $_FILES["FileWord"]["tmp_name"][$i];
+		if($_FILES['FileWord']["name"][$i] != ""){
+			$filename = md5(date("dmyhis")+ rand(0,9999999));
+		 	$extension = pathinfo($_FILES['FileWord']['type'][$i], PATHINFO_EXTENSION);
+			if(copy($_FILES["FileWord"]["tmp_name"][$i],"../machine_doc/".$filename.".".$extension))
+			{
+				$updateFileWord = "UPDATE machine SET FileWord = '".$filename."' WHERE MachineID = '$MachineID'";
+				$objQuery = mysql_query($updateFileWord);
+			}
+		}
+	}
+}
+
 if($sqlQuery){
 		
 		$json = array(

@@ -15,8 +15,13 @@
         อัตราค่าธรรมเนียม
         </a>
     </li>
+    <li role="presentation">
+        <a href="#machine" id="machine-tab" role="tab" data-toggle="tab" aria-controls="machine">
+        เครื่องจักร
+        </a>
+    </li>
 </ul>
-<form id="frmNewDoc" class="from-doc">
+<form id="frmNewDoc" class="from-doc" enctype="multipart/form-data">
 <div class="tab-content">
 <div role="tabpanel" id="pernelinf" class="tab-pane fade active in" aria-labelledby="pernelinf-tab">
 <div class="incontent">	
@@ -518,6 +523,18 @@
 </div>
 <!--*************************************Sheet 3 End ****************-->
 
+<!--*************************************Sheet 4  ****************-->
+<div role="tabpanel" id="machine" class="tab-pane fade" aria-labelledby="machine-tab">
+	<div class="incontent">
+		<div class="info">
+			<?php include('include/newMachine.php'); ?>
+
+		</div>
+		<div class="clean"></div>
+	</div>
+</div>
+<!--*************************************Sheet 4  End ****************-->
+
 </div>
 <div class="clean mt-57"></div>
 <div class="content-save">
@@ -526,22 +543,25 @@
   </div>
 </form>
 </div>
-
 <script src="js/doc.js"></script>
 <!--****************Script ***************************-->
 <script type="text/javascript">
 $("#SubmitFrmNewDoc").on('click',function(){
 		if($(".from-doc").valid() && ValidTeb2()){
+			 var fd = new FormData(document.getElementById("frmNewDoc"));
 			$.ajax({
            type: "POST",
            url: 'include/insertDoc.php',
-           data: $("#frmNewDoc").serialize(), 
+           data: fd, 
+           enctype: 'multipart/form-data',
+              processData: false,  // tell jQuery not to process the data
+              contentType: false,  // tell jQuery not to set contentType
            success: function(data)
            {
             console.log(data);
             if(data.IsResult == true){
               AlertSuccess();
-                window.location.href = 'index.php?page=detailDoc&id='+data.DocID;
+                //window.location.href = 'index.php?page=detailDoc&id='+data.DocID;
             }else{
               AlertError();
             }
