@@ -33,7 +33,7 @@
         </tr>
     </thead>
     <tbody>
-    <?php
+    <?php 
       $sqlDocDetail = "SELECT * FROM document WHERE IsDelete = 0";
       $docQuery = mysql_db_query($dbname, $sqlDocDetail);
       while ($objR = mysql_fetch_array($docQuery)) {
@@ -66,7 +66,7 @@
               $objPb =  mysql_fetch_array($pbQuery); ?>
             <td align="center"><?php if($objR['StatusPresentID']==19){ ?>
               <img src="images/pb.png" width="24" height="24" title="<?=$objPb['ProblemName']?>">
-              <? } ?></td>
+              <?php } ?></td>
             <td style="border-right:none;">
             <a href="?page=editDoc&id=<?=$DocID?>"><img src="images/edit.png" width="24" height="24" title="แก้ไข"></a>
             <a class="cur-pointer" onClick="DocDel(<?=$DocID?>)">

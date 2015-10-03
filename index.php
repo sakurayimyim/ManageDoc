@@ -39,7 +39,7 @@
    <!-- Left Menu -->
    <?php include("component/leftMenu.php"); ?>
   <!-- List Data-->
-  <?
+  <?php
   if ($_GET['page']!=''){ 
         $page= $_GET['page']; 
       }else{
