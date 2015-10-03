@@ -17,6 +17,9 @@
 <div class="content-list">
   <div class="content-header">
     เอกสารทั้งหมด
+    <div class="new_button">
+    <button type="button" class="btn btn-primary" id="GoNewDoc">สร้างเอกสาร</button>
+    </div>
   </div>
   <div class="content-body">
       <table id="DocTable" class="display table-bordered">

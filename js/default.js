@@ -58,6 +58,9 @@ $("#ManageProfile").on('click',function(){
 $("#ReportDoc").on('click',function(){
   window.location.href = 'index.php?page=reportDoc';
 });
+$("#GoNewMember").on('click',function(){
+  window.location.href = 'index.php?page=newMember';
+});
 /*
 function IsMyData(id){
         $.ajax({

@@ -52,6 +52,8 @@ $("#MemberType").on('change',function(){
 		$("#Institute").prop('disabled',true);
 	}
 });
+
+
 $("#SubmitFrmNewMember").on('click',function(){
 		if($("#frmNewMember").valid()){
 			$.ajax({
@@ -137,3 +139,4 @@ function MemberDel(MemberID){
     })
 	}
 }
+

@@ -77,7 +77,7 @@ $pageID = $_GET['pageID'];
               $objPb =  mysql_fetch_array($pbQuery); ?>
             <td align="center"><?php if($objR['StatusPresentID']==19){ ?>
               <img src="images/pb.png" width="24" height="24" title="<?=$objPb['ProblemName']?>">
-              <? } ?></td>
+              <?php } ?></td>
             <td align="center" style="border-right:none;">
             <?php if($objR['ApproveStatus']==0){ ?>
             <a class="cur-pointer" onClick="ReportApprove(<?=$objR['DocID']?>)"><img src="images/approvegr.png" width="24" height="24" title="อนุมัติ"></a></td>

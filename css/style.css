@@ -928,6 +928,11 @@ ul.left-menu li.active{
 	border-radius: 0px 0px 3px 3px;
 }
 
+.new_button{
+	float:right;
+	margin-top:-4px;
+}
+
 /********************Panel Tab Modified***********************/
 
 /********************* Detail Doc ***************************/

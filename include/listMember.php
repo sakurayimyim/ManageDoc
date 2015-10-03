@@ -1,6 +1,9 @@
 <div class="content-list">
   <div class="content-header">
     สมาชิกทั้งหมด
+    <div class="new_button">
+    <button type="button" class="btn btn-primary" id="GoNewMember">สร้างสมาชิก</button>
+    </div>
   </div>
   <div class="content-body list-minh650">
       <table id="MemberTable" class="display table-bordered">

@@ -18,6 +18,10 @@ $("#SolutionID").on('change',function(){
 $("#StatusPresentID").on("change",function(){
 	SetStatusPresentID();
 })
+$("#GoNewDoc").on('click',function(){
+  window.location.href = 'index.php?page=newDoc';
+});
+
 
 function SetJuristicTypeID(){
 	var JuristicTypeID = $("#JuristicTypeID").val();
