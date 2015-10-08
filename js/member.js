@@ -1,4 +1,3 @@
-
 $.validator.addMethod('selectcheck', function (value) {
     return (value != '0');
 }, "กรุณาเลือกข้อมูล");
