@@ -21,6 +21,11 @@
         อัตราค่าธรรมเนียม
         </a>
     </li>
+    <li role="presentation">
+        <a href="#machine" id="machine-tab" role="tab" data-toggle="tab" aria-controls="machine">
+        เครื่องจักร
+        </a>
+    </li>
 </ul>
 <form id="frmEditDoc" class="from-doc">
 <div class="tab-content">
@@ -33,7 +38,7 @@
 		</div>
 		<div class="info_left">
 			<div class="label_left"><font color="red">*</font> รหัสงานบริษัท :</div>
-			<div class="label_right"><input name="WorkCode" id="WorkCode" type="text" class="form-control form-w250" value="<?=$dataDoc['WorkCode']?> readonly"></div>
+			<div class="label_right"><input name="WorkCode" id="WorkCode" type="text" class="form-control form-w250" value="<?=$dataDoc['WorkCode']?>" readonly></div>
 		</div>
 		<div class="info_left">
 			<div class="label_left"><font color="red">*</font> APP :</div>
@@ -511,6 +516,18 @@
 </div>
 </div>
 <!--*************************************Sheet 3 End ****************-->
+
+<!--*************************************Sheet 4  ****************-->
+<div role="tabpanel" id="machine" class="tab-pane fade" aria-labelledby="machine-tab">
+	<div class="incontent">
+		<div class="info">
+			<?php include('include/editMachine.php'); ?>
+
+		</div>
+		<div class="clean"></div>
+	</div>
+</div>
+<!--*************************************Sheet 4  End ****************-->
 <input type="hidden" name="DocID" value="<?=$dataDoc['DocID']?>">
 </div>
 <div class="clean mt-57"></div>

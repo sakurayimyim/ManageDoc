@@ -22,7 +22,7 @@
 <div class="add-machine">
 	<button type="button" class="btn btn-primary" data-target="#myModal" data-toggle="modal">เพิ่ม</button>
 </div>
-<table id="TableBank" class="display table-bordered">
+<table id="TableMachine" class="display table-bordered">
     	<thead>
         <tr>
           <th>#</th>
@@ -61,13 +61,11 @@
 	<div id="frmNewMachine" class="from-machine">  
       <div class="modal-body">
       <div id="demo1" style="height:400px; overflow:auto">
-      <!--
 		<div class="info_left">
 			<div class="label_left"><font color="red">*</font> ชื่อสถานที่ตั้งเครื่องจักร :</div>
 			<div class="label_right250"><input type="text" class="form-control" name="MachineLocName" id="MachineLocName" ></div>
 		</div>
 		<div class="clean"></div>
-		-->
 		<div class="info_left">
 			<div class="label_left"><font color="red">*</font> ชื่อเครื่องจักร (ไทย) :</div>
 			<div class="label_right250"><input type="text" class="form-control" name="MachineName" id="MachineName"></div>
@@ -79,12 +77,12 @@
 		</div>
 		<div class="clean"></div>
 		<div class="info_left">
-			<div class="label_left"><font color="red">*</font> แบบ :</div>
+			<div class="label_left"><font color="red">*</font> รุ่น :</div>
 			<div class="label_right250"><input type="text" class="form-control" name="MachineModel" id="MachineModel"></div>
 		</div>
 		<div class="clean"></div>
 		<div class="info_left">
-			<div class="label_left"><font color="red">*</font> รุ่น :</div>
+			<div class="label_left"><font color="red">*</font> แบบ :</div>
 			<div class="label_right250"><input type="text" class="form-control" name="MachineGen" id="MachineGen"></div>
 		</div>
 		<div class="clean"></div>
@@ -113,25 +111,30 @@
 			<div class="label_right250"><input type="text" class="form-control" name="MachinePrice" id="MachinePrice"></div>
 		</div>
 		<div class="clean"></div>
-		<!--<div class="info_left">
+		<!--
+		<div class="info_left">
 			<div class="label_left">เอกสารแนบ :</div>
 			<div class="label_right250"><input type="file" class="form-control" name="FileWord" id="FileWord"></div>
 		</div>
+		-->
 		<div class="clean"></div>
-		<div class="info_left55">
+		<div class="info_left">
 			<div class="label_left"><font color="red">*</font> ละติจูด :</div>
-			<div class="label_right250"><input type="text" class="form-control" name="Latitude" disabled="true"></div>
+			<div class="label_right250"><input type="text" class="form-control" name="Latitude" id="Latitude"></div>
 		</div>
-		<div class="info_left45">
-			<div class="label_left150"><font color="red">*</font> ลองจิจูด :</div>
-			<div class="label_right250"><input type="text" class="form-control" name="Longitude" disabled="true" ></div>
+		<div class="clean"></div>
+		<div class="info_left">
+			<div class="label_left"><font color="red">*</font> ลองจิจูด :</div>
+			<div class="label_right250"><input type="text" class="form-control" name="Longitude" id="Longitude"></div>
 		</div> 
+		<div class="clean"></div>
+		<!--
 		<div class="clean"></div>
 		<div class="info_left">
 			<div class="label_left">ไฟล์แนบแผนที่:</div>
 			<div class="label_right250"><input type="file" class="form-control" name="FileMap" id="FileMap"></div>
 		</div>-->
-		<div class="clean"></div>
+		
       </div>
       </div>
       </div>

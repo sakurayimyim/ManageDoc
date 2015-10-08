@@ -123,9 +123,9 @@ if($sqlQuery != "" && $_POST['StatusPresentID'] == 19 && $_POST['ProblemID'] > 0
 
 if(count($_POST['MachineName']) > 0){
 	for ($i=0; $i < count($_POST['MachineName']); $i++) { 
-			$sqlMachine = "INSERT INTO machine VALUES('',
+			echo $sqlMachine = "INSERT INTO machine VALUES('',
 			'$DocID',
-			'".$_POST['MachineLocationName']."',
+			'".$_POST['MachineLocName'][$i]."',
 			'".$_POST['MachineName'][$i]."',
 			'".$_POST['MachineNameEng'][$i]."',
 			'".$_POST['MachineModel'][$i]."',

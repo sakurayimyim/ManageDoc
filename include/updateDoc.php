@@ -93,9 +93,6 @@ if($sqlQuery != "" && $_POST['StatusPresentID'] == 19 && $_POST['ProblemID'] > 0
 		echo $dataLog['SolutionID'];
 		echo $_POST['ProblemID'];
 		echo $_POST['SolutionID'];
-
-
-
 		
 		$SolutionName = "";
 		$ProblemName = "";

@@ -534,7 +534,6 @@
 	</div>
 </div>
 <!--*************************************Sheet 4  End ****************-->
-
 </div>
 <div class="clean mt-57"></div>
 <div class="content-save">
@@ -561,7 +560,7 @@ $("#SubmitFrmNewDoc").on('click',function(){
             console.log(data);
             if(data.IsResult == true){
               AlertSuccess();
-                //window.location.href = 'index.php?page=detailDoc&id='+data.DocID;
+                window.location.href = 'index.php?page=detailDoc&id='+data.DocID;
             }else{
               AlertError();
             }
